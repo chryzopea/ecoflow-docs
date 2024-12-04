@@ -6,7 +6,7 @@ title: EcoFlow Documentation
 # Welcome to EcoFlow Documentation
 
 ## Sections
-- [Setup Guide](setup.md)
-- [Features Overview](features.md)
-- [Customization Instructions](customization.md)
-- [Troubleshooting](troubleshooting.md)
+- [Setup Guide](setup.html)
+- [Features Overview](features.html)
+- [Customization Instructions](customization.html)
+- [Troubleshooting](troubleshooting.html)
