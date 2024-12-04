@@ -19,16 +19,23 @@
 # in the templates via {{ site.myvariable }}.
 
 title: "EcoFlow Documentation"
+email: admin@pawelsiemieniuk.com
 description: "Official documentation for the EcoFlow Shopify theme."
-baseurl: "" # Leave empty for Netlify
+baseurl: "" # Leave this blank for Netlify
 url: "https://ecoflow-docs.netlify.app" # Your Netlify site URL
-
-email: "admin@pawelsiemieniuk.com"
-twitter_username: "" # Leave empty if not applicable
-github_username: "chryzopea"
-
 theme: minima
 markdown: kramdown
+
+# Exclude unnecessary files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+
+# Enable Minima theme customization
+minima:
+  social_links: []
+
 
 plugins:
   - jekyll-feed
@@ -52,13 +59,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-
-title: EcoFlow Documentation
-description: Official documentation for the EcoFlow Shopify theme.
-baseurl: "" # Leave empty for Netlify
-url: "https://ecoflow-docs.netlify.app" # Replace with your Netlify site URL
-
-markdown: kramdown
-theme: minima # You can keep this or replace it with another Jekyll theme
-
