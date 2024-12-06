@@ -11,3 +11,9 @@
 ### Added
 - Initial theme features.
 
+## Documentation Links
+
+- [Setup Guide](setup.md)
+- [Features Overview](features.md)
+- [Changelog](CHANGELOG.md)
+
