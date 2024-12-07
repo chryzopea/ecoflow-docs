@@ -1,14 +1,16 @@
----
-layout: default
-title: "Customization Instructions"
----
 # Customization Instructions
+## Vue.js
+- Update `scripts.js` for new Vue components.
+- Mount Vue apps on Shopify DOM elements.
 
-Learn how to customize the EcoFlow Shopify theme to suit your needs.
+## GSAP
+- Define animations in `scripts.js`.
+- Example: `gsap.to('.element', { x: 200, duration: 1.5 });`
 
-## Available Options
-- Change color schemes.
-- Add custom branding elements.
-- Modify layout settings.
+## LazySizes
+- Use `data-src` for images in `theme.liquid`.
+- Example:
+  ```html
+  <img class="lazyload" data-src="{{ 'image.jpg' | asset_url }}" alt="Example Image">
+  ```
 
-Detailed customization steps will be available soon.

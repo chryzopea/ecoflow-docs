@@ -1,14 +1,6 @@
----
-layout: default
-title: "Setup Instructions"
----
 # Setup Instructions
+1. Clone the repository: `git clone <repository-url>`
+2. Install dependencies: `npm install`
+3. Build assets: `npm run bundle-js`
+4. Push to Shopify: `shopify theme push`
 
-This page will guide you through the initial steps to set up the EcoFlow Shopify theme.
-
-## Steps
-1. Download the theme from your Shopify admin.
-2. Upload the `.zip` file to the Themes section.
-3. Customize settings via the Shopify Theme Editor.
-
-Additional setup details will be added soon.

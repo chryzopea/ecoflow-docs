@@ -1,12 +1,14 @@
----
-layout: default
-title: "Troubleshooting"
----
 # Troubleshooting
 
-If you encounter issues with the EcoFlow theme, try the following:
-- Ensure you're using the latest theme version.
-- Check Shopify documentation for common errors.
-- Contact support at [admin@pawelsiemieniuk.com](mailto:admin@pawelsiemieniuk.com).
+## Vue.js Issues
+- **Problem**: Vue app not rendering.
+  **Solution**: Verify DOM element exists and Vue is properly initialized in `scripts.js`.
 
-More troubleshooting tips will be added later.
+## LazySizes Issues
+- **Problem**: Images not loading.
+  **Solution**: Ensure correct `data-src` paths in `theme.liquid` and check console errors.
+
+## GSAP Issues
+- **Problem**: Animations not triggering.
+  **Solution**: Ensure `.element` or `.another-element` exist in the DOM.
+
