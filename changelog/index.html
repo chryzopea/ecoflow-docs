@@ -29,6 +29,27 @@
   <!-- End Jekyll SEO tag -->
   <link rel="stylesheet" href="/assets/main.css">
   <link type="application/atom+xml" rel="alternate" href="https://ecoflow-docs.netlify.app/feed.xml" title="EcoFlow Documentation" />
+
+  <!-- Added JSON-LD Support -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "description": "Official documentation for the EcoFlow Shopify theme with JSON-LD and SEO enhancements.",
+      "sameAs": [
+        "https://facebook.com/yourpage",
+        "https://instagram.com/yourpage",
+        "https://youtube.com/yourchannel",
+        "https://tiktok.com/@yourpage",
+        "https://pinterest.com/yourpage",
+        "https://snapchat.com/add/yourpage",
+        "https://tumblr.com/yourblog",
+        "https://vimeo.com/yourpage"
+      ]
+    }
+  </script>
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="{{ settings.favicon | image_url: width: 32, height: 32 }}" type="image/png">
 </head>
 <body>
   <header class="site-header" role="banner">
@@ -57,16 +78,14 @@
     <div class="wrapper">
       <h1 id="changelog">Changelog</h1>
 
-      <h2 id="unreleased">[Unreleased]</h2>
+      <h2 id="unreleased">[1.0.1] - Header HTML Compliance</h2>
       <h3 id="added">Added</h3>
       <ul>
-        <li>Placeholder for new features.</li>
+        <li><strong>Added JSON-LD Support</strong>: Implemented structured data for SEO across product, collection, blog, contact, and homepage templates. Ensures compatibility with Google Rich Results Test and improves search visibility. <strong>Includes Translation Support</strong>: JSON-LD fields now support multilingual themes via <code>en.default.schema.json</code> entries.</li>
+        <li><strong>Integrated Dynamic Social Media Links</strong>: Dynamically generated <code>sameAs</code> links for social platforms based on Shopify theme settings. Supported platforms include Facebook, Instagram, YouTube, TikTok, Pinterest, Snapchat, Tumblr, and Vimeo. <strong>Localized Labels and Descriptions</strong>: Social account settings now include translations for UI clarity.</li>
+        <li><strong>Added Meta Tags for SEO</strong>: <code>&lt;meta name="robots" content="index, follow"&gt;</code> ensures pages are indexed and links followed by search engines. <code>&lt;link rel="icon"&gt;</code> dynamically references the favicon set in theme settings. Meta tag descriptions and labels are translation-ready.</li>
       </ul>
 
-      <h3 id="fixed">Fixed</h3>
-      <ul>
-        <li>Placeholder for bug fixes.</li>
-      </ul>
 
       <h2 id="100---initial-release">[1.0.0] - Initial Release</h2>
       <h3 id="added-1">Added</h3>

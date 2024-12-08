@@ -68,36 +68,57 @@
 
       <p>Detailed customization steps will be available soon.</p>
 
-      <h2>Vue.js Integration</h2>
+      <!-- Social Media Links Section -->
+      <h2 id="managing-social-media-links">Managing Social Media Links</h2>
       <ol>
-        <li>Add components and logic to <code>scripts.js</code>.</li>
-        <li>Mount Vue apps on Shopify elements:
-          <pre><code>const app = createApp(App);
-app.mount('#vue-app');</code></pre>
+        <li>Navigate to <strong>Theme Settings &gt; Social Accounts</strong> in the Shopify admin.</li>
+        <li>Add your profile URLs (e.g., Facebook, Instagram, Twitter). Supported platforms include:
+          <ul>
+            <li>Facebook, Instagram, YouTube, TikTok, Pinterest, Snapchat, Tumblr, Vimeo, and more.</li>
+          </ul>
         </li>
-        <li>Test Vue rendering with a static or dynamic template.</li>
+        <li>Each social media field includes:
+          <ul>
+            <li><strong>Label</strong>: E.g., “Facebook Profile URL.”</li>
+            <li><strong>Info Tooltip</strong>: Guidance on what to enter (e.g., "Enter the full URL of your Facebook profile").</li>
+          </ul>
+        </li>
+        <li><strong>Translation Support</strong>: Labels and tooltips for social media fields are defined in <code>en.default.schema.json</code> under <code>social_accounts</code>.</li>
       </ol>
 
-      <h2>GSAP Animations</h2>
+      <!-- Favicon Section -->
+      <h2 id="setting-the-favicon">Setting the Favicon</h2>
       <ol>
-        <li>Define animations using <code>gsap.to()</code>:
-          <pre><code>gsap.to('.element', { x: 100, duration: 1 });
-gsap.to('.another-element', { opacity: 1, duration: 1.5 });</code></pre>
+        <li>Go to <strong>Theme Settings &gt; Logo</strong>.</li>
+        <li>Upload your desired favicon under "Favicon."</li>
+        <li>The system dynamically generates the <code>&lt;link rel="icon"&gt;</code> tag:
+          <pre><code>&lt;link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}"&gt;</code></pre>
         </li>
-        <li>Ensure target elements exist in the DOM.</li>
+        <li><strong>Translation Support</strong>: The "Favicon" label and info text are defined in <code>en.default.schema.json</code> under <code>settings_schema.logo</code>.</li>
       </ol>
 
-      <h2>LazySizes for Images</h2>
+      <!-- Social Media Metadata Section -->
+      <h2 id="social-media-metadata">Social Media Metadata</h2>
       <ol>
-        <li>Use <code>data-src</code> in <code>theme.liquid</code> for images:
-          <pre><code><img class="lazyload" data-src="{{ 'image.jpg' | asset_url }}" alt="Example Image"></code></pre>
+        <li>Go to <strong>Theme Settings &gt; Social Meta</strong> to define:
+          <ul>
+            <li>Meta Title (e.g., "Default Meta Title").</li>
+            <li>Meta Description (e.g., "A short description for social media previews").</li>
+            <li>Meta Image (used for sharing on platforms like Facebook or Twitter).</li>
+          </ul>
         </li>
-        <li>Verify LazySizes initialization:
-          <pre><code>if (window.lazySizes) {
-  console.log('LazySizes is loaded and initialized.');
-}</code></pre>
-        </li>
+        <li><strong>Translation Support</strong>: Labels and descriptions for these fields are defined in <code>en.default.schema.json</code> under <code>settings_schema.social_meta</code>.</li>
       </ol>
+
+      <!-- JSON-LD Section -->
+      <h2 id="using-json-ld">Using JSON-LD</h2>
+      <p>JSON-LD is automatically included based on the page type:</p>
+      <ul>
+        <li><strong>Product Pages</strong>: Includes structured data for product details, brand, offers, and social links.</li>
+        <li><strong>Collection Pages</strong>: Adds breadcrumb navigation data.</li>
+        <li><strong>Blog Pages</strong>: Includes metadata for blog articles.</li>
+        <li><strong>Index and Contact Pages</strong>: Includes structured data for <code>WebPage</code> or <code>ContactPage</code>.</li>
+      </ul>
     </div>
   </main>
   <footer class="site-footer h-card">

@@ -86,6 +86,34 @@
             <strong>Solution</strong>: Verify that target elements (<code>.element</code>, <code>.another-element</code>) are present in the DOM. Debug animation logic in <code>scripts.js</code>.</li>
       </ul>
 
+      <h3>Social Media Links Missing</h3>
+      <ul>
+        <li>Ensure the URLs are correctly entered in <strong>Theme Settings > Social Accounts</strong>.</li>
+        <li>Check the translation file for proper <code>id</code> and <code>label</code> mappings.</li>
+      </ul>
+
+      <h3>Favicon Not Displaying</h3>
+      <ul>
+        <li>Verify the favicon is uploaded in <strong>Theme Settings > Logo</strong>.</li>
+        <li>Confirm the generated <code>&lt;link rel="icon"&gt;</code> tag in the HTML <code>&lt;head&gt;</code>.</li>
+      </ul>
+
+      <h3>Translation Issues</h3>
+      <ul>
+        <li>Ensure the <code>en.default.schema.json</code> contains all necessary entries under <code>settings_schema</code>.</li>
+        <li>Example:</li>
+        <pre><code>{
+  "settings_schema": {
+    "social_accounts": {
+      "facebook": {
+        "label": "Facebook Profile URL",
+        "info": "Enter the full URL of your Facebook profile."
+      }
+    }
+  }
+}</code></pre>
+      </ul>
+
     </div>
   </main>
   <footer class="site-footer h-card">
