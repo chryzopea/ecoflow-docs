@@ -49,89 +49,104 @@
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
       <h1 id="customization-instructions">Customization Instructions</h1>
-
       <p>Learn how to customize the EcoFlow Shopify theme to suit your needs.</p>
-
-      <h2 id="available-options">Available Options</h2>
-      <ul>
-        <li>Change color schemes.</li>
-        <li>Add custom branding elements.</li>
-        <li>Modify layout settings.</li>
-      </ul>
-
-      <p>Detailed customization steps will be available soon.</p>
-
-      <!-- Social Media Links Section -->
-      <h2 id="managing-social-media-links">Managing Social Media Links</h2>
-      <ol>
-        <li>Navigate to <strong>Theme Settings &gt; Social Accounts</strong> in the Shopify admin.</li>
-        <li>Add your profile URLs (e.g., Facebook, Instagram, Twitter). Supported platforms include:
-          <ul>
-            <li>Facebook, Instagram, YouTube, TikTok, Pinterest, Snapchat, Tumblr, Vimeo, and more.</li>
-          </ul>
-        </li>
-        <li>Each social media field includes:
-          <ul>
-            <li><strong>Label</strong>: E.g., “Facebook Profile URL.”</li>
-            <li><strong>Info Tooltip</strong>: Guidance on what to enter (e.g., "Enter the full URL of your Facebook profile").</li>
-          </ul>
-        </li>
-        <li><strong>Translation Support</strong>: Labels and tooltips for social media fields are defined in <code>en.default.schema.json</code> under <code>social_accounts</code>.</li>
-      </ol>
-
-      <!-- Favicon Section -->
-      <h2 id="setting-the-favicon">Setting the Favicon</h2>
-      <ol>
-        <li>Go to <strong>Theme Settings &gt; Logo</strong>.</li>
-        <li>Upload your desired favicon under "Favicon."</li>
-        <li>The system dynamically generates the <code>&lt;link rel="icon"&gt;</code> tag:
-          <pre><code>&lt;link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}"&gt;</code></pre>
-        </li>
-        <li><strong>Translation Support</strong>: The "Favicon" label and info text are defined in <code>en.default.schema.json</code> under <code>settings_schema.logo</code>.</li>
-      </ol>
-
-      <!-- Social Media Metadata Section -->
-      <h2 id="social-media-metadata">Social Media Metadata</h2>
-      <ol>
-        <li>Go to <strong>Theme Settings &gt; Social Meta</strong> to define:
-          <ul>
-            <li>Meta Title (e.g., "Default Meta Title").</li>
-            <li>Meta Description (e.g., "A short description for social media previews").</li>
-            <li>Meta Image (used for sharing on platforms like Facebook or Twitter).</li>
-          </ul>
-        </li>
-        <li><strong>Translation Support</strong>: Labels and descriptions for these fields are defined in <code>en.default.schema.json</code> under <code>settings_schema.social_meta</code>.</li>
-      </ol>
-
-      <!-- JSON-LD Section -->
-      <h2 id="using-json-ld">Using JSON-LD</h2>
-      <p>JSON-LD is automatically included based on the page type:</p>
-      <ul>
-        <li><strong>Product Pages</strong>: Includes structured data for product details, brand, offers, and social links.</li>
-        <li><strong>Collection Pages</strong>: Adds breadcrumb navigation data.</li>
-        <li><strong>Blog Pages</strong>: Includes metadata for blog articles.</li>
-        <li><strong>Index and Contact Pages</strong>: Includes structured data for <code>WebPage</code> or <code>ContactPage</code>.</li>
-      </ul>
-
-      <!-- Responsive SCSS and GSAP -->
-      <h2 id="responsive-customization">Responsive Customization</h2>
-      <p>The EcoFlow Shopify theme includes centralized breakpoints for responsive styling and animations.</p>
-      <ul>
-        <li>Breakpoints are defined in a single `breakpoints.js` file for consistency across styles and animations.</li>
-        <li>Modify breakpoints in one place to update both SCSS and GSAP animations.</li>
-      </ul>
-
-      <h3>Breakpoints Overview</h3>
-      <ul>
-        <li><strong>Mobile</strong>: max-width: 768px</li>
-        <li><strong>Tablet</strong>: max-width: 1024px</li>
-        <li><strong>Desktop</strong>: min-width: 1025px</li>
-      </ul>
-
-      <!-- Typography -->
-      <h2>Typography Customization</h2>
+    
+      <section aria-labelledby="available-options">
+        <h2 id="available-options">Available Options</h2>
+        <ul>
+          <li>Change color schemes.</li>
+          <li>Add custom branding elements.</li>
+          <li>Modify layout settings.</li>
+        </ul>
+        <p>Detailed customization steps will be available soon.</p>
+      </section>
+    
+      <section aria-labelledby="managing-social-media-links">
+        <h2 id="managing-social-media-links">Managing Social Media Links</h2>
+        <ol>
+          <li>
+            Navigate to <strong>Theme Settings &gt; Social Accounts</strong> in the Shopify admin.
+          </li>
+          <li>
+            Add your profile URLs (e.g., Facebook, Instagram, Twitter). Supported platforms include:
+            <ul>
+              <li>Facebook, Instagram, YouTube, TikTok, Pinterest, Snapchat, Tumblr, Vimeo, and more.</li>
+            </ul>
+          </li>
+          <li>
+            Each social media field includes:
+            <ul>
+              <li><strong>Label</strong>: E.g., “Facebook Profile URL.”</li>
+              <li><strong>Info Tooltip</strong>: Guidance on what to enter (e.g., "Enter the full URL of your Facebook profile").</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Translation Support</strong>: Labels and tooltips for social media fields are defined in <code>en.default.schema.json</code> under <code>social_accounts</code>.
+          </li>
+        </ol>
+      </section>
+    
+      <section aria-labelledby="setting-the-favicon">
+        <h2 id="setting-the-favicon">Setting the Favicon</h2>
+        <ol>
+          <li>Go to <strong>Theme Settings &gt; Logo</strong>.</li>
+          <li>Upload your desired favicon under "Favicon."</li>
+          <li>
+            The system dynamically generates the <code>&lt;link rel="icon"&gt;</code> tag:
+            <pre><code>&lt;link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}"&gt;</code></pre>
+          </li>
+          <li>
+            <strong>Translation Support</strong>: The "Favicon" label and info text are defined in <code>en.default.schema.json</code> under <code>settings_schema.logo</code>.
+          </li>
+        </ol>
+      </section>
+    
+      <section aria-labelledby="social-media-metadata">
+        <h2 id="social-media-metadata">Social Media Metadata</h2>
+        <ol>
+          <li>
+            Go to <strong>Theme Settings &gt; Social Meta</strong> to define:
+            <ul>
+              <li>Meta Title (e.g., "Default Meta Title").</li>
+              <li>Meta Description (e.g., "A short description for social media previews").</li>
+              <li>Meta Image (used for sharing on platforms like Facebook or Twitter).</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Translation Support</strong>: Labels and descriptions for these fields are defined in <code>en.default.schema.json</code> under <code>settings_schema.social_meta</code>.
+          </li>
+        </ol>
+      </section>
+    
+      <section aria-labelledby="using-json-ld">
+        <h2 id="using-json-ld">Using JSON-LD</h2>
+        <p>JSON-LD is automatically included based on the page type:</p>
+        <ul>
+          <li><strong>Product Pages</strong>: Includes structured data for product details, brand, offers, and social links.</li>
+          <li><strong>Collection Pages</strong>: Adds breadcrumb navigation data.</li>
+          <li><strong>Blog Pages</strong>: Includes metadata for blog articles.</li>
+          <li><strong>Index and Contact Pages</strong>: Includes structured data for <code>WebPage</code> or <code>ContactPage</code>.</li>
+        </ul>
+      </section>
+    
+      <section aria-labelledby="responsive-customization">
+        <h2 id="responsive-customization">Responsive Customization</h2>
+        <p>The EcoFlow Shopify theme includes centralized breakpoints for responsive styling and animations.</p>
+        <ul>
+          <li>Breakpoints are defined in a single `breakpoints.js` file for consistency across styles and animations.</li>
+          <li>Modify breakpoints in one place to update both SCSS and GSAP animations.</li>
+        </ul>
+        <h3>Breakpoints Overview</h3>
+        <ul>
+          <li><strong>Mobile</strong>: max-width: 768px</li>
+          <li><strong>Tablet</strong>: max-width: 1024px</li>
+          <li><strong>Desktop</strong>: min-width: 1025px</li>
+        </ul>
+      </section>
+    
+      <section aria-labelledby="typography-customization">
+        <h2 id="typography-customization">Typography Customization</h2>
         <p>The EcoFlow theme allows full control over typography directly in the Theme Editor.</p>
-
         <h3>Available Settings</h3>
         <ul>
           <li><strong>Body Font:</strong> Select from system fonts, Google Fonts, or upload a custom font.</li>
@@ -146,25 +161,23 @@
           <li><strong>Line Heights:</strong> Customize line spacing for headings and body text (1.2–2.0).</li>
           <li><strong>Font Weights:</strong> Select weights from 100 to 900.</li>
         </ul>
-
-<h3>How to Customize</h3>
-<ol>
-  <li>Open the Theme Editor in Shopify.</li>
-  <li>Navigate to <strong>Typography Settings</strong>.</li>
-  <li>Adjust the following:
-    <ul>
-      <li>Body and heading fonts.</li>
-      <li>Sizes for body text and headings (<code>H1</code>–<code>H6</code>).</li>
-      <li>Line heights for body text and headings.</li>
-      <li>Font weights for body and headings.</li>
-    </ul>
-  </li>
-</ol>
-
-<h3>Preview Changes</h3>
-<p>Use the responsive preview tool to ensure the typography adjusts well across devices.</p>
-
-    </div>
+        <h3>How to Customize</h3>
+        <ol>
+          <li>Open the Theme Editor in Shopify.</li>
+          <li>Navigate to <strong>Typography Settings</strong>.</li>
+          <li>Adjust the following:
+            <ul>
+              <li>Body and heading fonts.</li>
+              <li>Sizes for body text and headings (<code>H1</code>–<code>H6</code>).</li>
+              <li>Line heights for body text and headings.</li>
+              <li>Font weights for body and headings.</li>
+            </ul>
+          </li>
+        </ol>
+        <h3>Preview Changes</h3>
+        <p>Use the responsive preview tool to ensure the typography adjusts well across devices.</p>
+      </section>
+    </div>    
   </main>
   <footer class="site-footer h-card">
     <div class="wrapper">

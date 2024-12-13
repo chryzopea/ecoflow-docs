@@ -44,77 +44,81 @@
   <div class="wrapper">
     <h1 id="setup-instructions">Setup Instructions</h1>
     <p>This page will guide you through the initial steps to set up the EcoFlow Shopify theme.</p>
-
-    <h2 id="steps">Steps</h2>
-    <ol>
-      <li>Download the theme from your Shopify admin.</li>
-      <li>Upload the <code class="language-plaintext highlighter-rouge">.zip</code> file to the Themes section.</li>
-      <li>Customize settings via the Shopify Theme Editor.</li>
-      <li>Define Breakpoints:
-        <ul>
-          <li>Create a `breakpoints.js` file in your project.</li>
-          <li>Add the following content:
-            <pre><code>
-      export const breakpoints = {
-        mobile: 768,
-        tablet: 1024,
-        desktop: 1025,
-      };
-            </code></pre>
-          </li>
-          <li>Ensure SCSS and GSAP use this file to reference breakpoints.</li>
-        </ul>
-      </li>      
-    </ol>
-
-    <h2 id="additional-setup">Additional Setup</h2>
-    <ol>
-      <li><strong>Add Social Media Links:</strong>
-        <ul>
-          <li>Navigate to <strong>Theme Settings &gt; Social Accounts</strong> and input your URLs.</li>
-          <li>Ensure the labels and descriptions match your site's language.</li>
-        </ul>
-      </li>
-      <li><strong>Set Up Metadata:</strong>
-        <ul>
-          <li>Define meta title, description, and image under <strong>Theme Settings &gt; Social Meta</strong>.</li>
-          <li>Use translation files (<code>en.default.schema.json</code>) for localized labels.</li>
-        </ul>
-      </li>
-      <li><strong>Verify JSON-LD:</strong>
-        <ul>
-          <li>Test structured data in <a href="https://search.google.com/test/rich-results">Google Rich Results Test</a> to ensure validity.</li>
-        </ul>
-      </li>
-    </ol>
-
-    <p>Additional setup details will be added soon.</p>
-
-    <h2>Development Steps</h2>
-    <ol>
-      <li><strong>Clone Repository:</strong>
-        <pre><code>git clone <repository-url></code></pre>
-      </li>
-      <li><strong>Install Dependencies:</strong>
-        <pre><code>npm install
-bundle install</code></pre>
-      </li>
-      <li><strong>Build Assets:</strong>
-        <pre><code>npm run bundle-js</code></pre>
-      </li>
-      <li><strong>Deploy to Shopify:</strong>
-        <pre><code>shopify theme push</code></pre>
-      </li>
-    </ol>
-
-    <h2>Setup Instructions</h2>
-
+  
+    <section aria-labelledby="steps">
+      <h2 id="steps">Steps</h2>
+      <ol>
+        <li>Download the theme from your Shopify admin.</li>
+        <li>Upload the <code>.zip</code> file to the Themes section.</li>
+        <li>Customize settings via the Shopify Theme Editor.</li>
+        <li>Define Breakpoints:
+          <ul>
+            <li>Create a <code>breakpoints.js</code> file in your project.</li>
+            <li>Add the following content:
+              <pre><code>export const breakpoints = {
+    mobile: 768,
+    tablet: 1024,
+    desktop: 1025,
+  };</code></pre>
+            </li>
+            <li>Ensure SCSS and GSAP reference this file for breakpoints.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+  
+    <section aria-labelledby="additional-setup">
+      <h2 id="additional-setup">Additional Setup</h2>
+      <ol>
+        <li><strong>Add Social Media Links:</strong>
+          <ul>
+            <li>Navigate to <strong>Theme Settings &gt; Social Accounts</strong> and input your URLs.</li>
+            <li>Ensure the labels and descriptions match your site's language.</li>
+          </ul>
+        </li>
+        <li><strong>Set Up Metadata:</strong>
+          <ul>
+            <li>Define meta title, description, and image under <strong>Theme Settings &gt; Social Meta</strong>.</li>
+            <li>Use translation files (<code>en.default.schema.json</code>) for localized labels.</li>
+          </ul>
+        </li>
+        <li><strong>Verify JSON-LD:</strong>
+          <ul>
+            <li>Test structured data in <a href="https://search.google.com/test/rich-results" target="_blank" rel="noopener">Google Rich Results Test</a> to ensure validity.</li>
+          </ul>
+        </li>
+      </ol>
+      <p>Additional setup details will be added soon.</p>
+    </section>
+  
+    <section aria-labelledby="development-steps">
+      <h2 id="development-steps">Development Steps</h2>
+      <ol>
+        <li><strong>Clone Repository:</strong>
+          <pre><code>git clone &lt;repository-url&gt;</code></pre>
+        </li>
+        <li><strong>Install Dependencies:</strong>
+          <pre><code>npm install
+  bundle install</code></pre>
+        </li>
+        <li><strong>Build Assets:</strong>
+          <pre><code>npm run bundle-js</code></pre>
+        </li>
+        <li><strong>Deploy to Shopify:</strong>
+          <pre><code>shopify theme push</code></pre>
+        </li>
+      </ol>
+    </section>
+  
+    <section aria-labelledby="typography-setup">
+      <h2 id="typography-setup">Typography Setup</h2>
+  
       <h3>Enable Dynamic Typography</h3>
       <ol>
         <li>Ensure your theme is using the latest version (<code>v1.1.0</code> or later).</li>
         <li>Verify that <strong>Responsive Typography</strong> is enabled in the Theme Editor.</li>
       </ol>
-
+  
       <h3>Customize Typography</h3>
       <ol>
         <li>Open the Theme Editor in Shopify.</li>
@@ -127,11 +131,11 @@ bundle install</code></pre>
           </ul>
         </li>
       </ol>
-
+  
       <h3>Preview Across Devices</h3>
       <p>Use Shopify's built-in preview tool to test typography on mobile, tablet, and desktop.</p>
-
-  </div>
+    </section>
+  </div>  
 </main>
 <footer class="site-footer h-card">
   <data class="u-url" href="/"></data>

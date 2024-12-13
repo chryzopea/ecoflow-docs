@@ -70,40 +70,64 @@
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
       <h1 id="changelog">Changelog</h1>
-
-      <h2 id="unreleased">[1.0.1] - Header HTML Compliance</h2>
-      <h3 id="added">Added</h3>
-      <ul>
-        <li><strong>Added JSON-LD Support</strong>: Implemented structured data for SEO across product, collection, blog, contact, and homepage templates. Ensures compatibility with Google Rich Results Test and improves search visibility. <strong>Includes Translation Support</strong>: JSON-LD fields now support multilingual themes via <code>en.default.schema.json</code> entries.</li>
-        <li><strong>Integrated Dynamic Social Media Links</strong>: Dynamically generated <code>sameAs</code> links for social platforms based on Shopify theme settings. Supported platforms include Facebook, Instagram, YouTube, TikTok, Pinterest, Snapchat, Tumblr, and Vimeo. <strong>Localized Labels and Descriptions</strong>: Social account settings now include translations for UI clarity.</li>
-        <li><strong>Added Meta Tags for SEO</strong>: <code>&lt;meta name="robots" content="index, follow"&gt;</code> ensures pages are indexed and links followed by search engines. <code>&lt;link rel="icon"&gt;</code> dynamically references the favicon set in theme settings. Meta tag descriptions and labels are translation-ready.</li>
-      </ul>
-
-
-      <h2 id="100---initial-release">[1.0.0] - Initial Release</h2>
-      <h3 id="added-1">Added</h3>
-      <ul>
-        <li>Initial theme features.</li>
-      </ul>
-
-      <h2 id="documentation-links">Documentation Links</h2>
-      <ul>
-        <li><a href="setup.md">Setup Guide</a></li>
-        <li><a href="features.md">Features Overview</a></li>
-        <li><a href="CHANGELOG.md">Changelog</a></li>
-      </ul>
-
-      <h2>Milestone: Vue.js, GSAP, and LazySizes Configuration</h2>
-      <ul>
-        <li><strong>Vue.js</strong>: Configured with <code>esm-bundler</code> for Shopify compatibility. Successfully rendered a Vue app within the <code>#vue-app</code> element.</li>
-        <li><strong>GSAP</strong>: Implemented animations for <code>.element</code> (slide) and <code>.another-element</code> (fade).</li>
-        <li><strong>LazySizes</strong>: Integrated for optimized image loading using <code>data-src</code> attributes.</li>
-      </ul>
-
-      <h2>Changelog</h2>
-        <h3>[v1.1.0]</h3>
+    
+      <section aria-labelledby="release-100">
+        <h2 id="release-100">[1.0.0] - Initial Release</h2>
         <ul>
-          <li><strong>Added:</strong>
+          <li>Initial theme features.</li>
+        </ul>
+      </section>
+    
+      <section aria-labelledby="documentation-links">
+        <h2 id="documentation-links">Documentation Links</h2>
+        <ul>
+          <li><a href="setup.md">Setup Guide</a></li>
+          <li><a href="features.md">Features Overview</a></li>
+          <li><a href="CHANGELOG.md">Changelog</a></li>
+        </ul>
+      </section>
+    
+      <section aria-labelledby="compliance">
+        <h2 id="compliance">[1.1.0] - Header HTML Compliance</h2>
+        <ul>
+          <li>
+            <strong>Added JSON-LD Support:</strong>
+            Implemented structured data for SEO across product, collection, blog, contact, and homepage templates. Ensures compatibility with Google Rich Results Test and improves search visibility.
+            <strong>Includes Translation Support:</strong> JSON-LD fields now support multilingual themes via <code>en.default.schema.json</code> entries.
+          </li>
+          <li>
+            <strong>Integrated Dynamic Social Media Links:</strong>
+            Dynamically generated <code>sameAs</code> links for social platforms based on Shopify theme settings. Supported platforms include Facebook, Instagram, YouTube, TikTok, Pinterest, Snapchat, Tumblr, and Vimeo.
+            <strong>Localized Labels and Descriptions:</strong> Social account settings now include translations for UI clarity.
+          </li>
+          <li>
+            <strong>Added Meta Tags for SEO:</strong>
+            <code>&lt;meta name="robots" content="index, follow"&gt;</code> ensures pages are indexed and links followed by search engines.
+            <code>&lt;link rel="icon"&gt;</code> dynamically references the favicon set in theme settings. Meta tag descriptions and labels are translation-ready.
+          </li>
+        </ul>
+      </section>
+    
+      <section aria-labelledby="vue-js-gsap-lazysizes">
+        <h2 id="vue-js-gsap-lazysizes">[1.2.0] - Vue.js, GSAP, and LazySizes Configuration</h2>
+        <ul>
+          <li>
+            <strong>Vue.js:</strong> Configured with <code>esm-bundler</code> for Shopify compatibility. Successfully rendered a Vue app within the <code>#vue-app</code> element.
+          </li>
+          <li>
+            <strong>GSAP:</strong> Implemented animations for <code>.element</code> (slide) and <code>.another-element</code> (fade).
+          </li>
+          <li>
+            <strong>LazySizes:</strong> Integrated for optimized image loading using <code>data-src</code> attributes.
+          </li>
+        </ul>
+      </section>
+    
+      <section aria-labelledby="typography">
+        <h2 id="typography">[1.3.0] - Typography</h2>
+        <ul>
+          <li>
+            <strong>Added:</strong>
             <ul>
               <li>Responsive Typography System:
                 <ul>
@@ -115,11 +139,13 @@
               </li>
             </ul>
           </li>
-          <li><strong>Updated:</strong> Improved text readability with responsive line heights and word-breaking settings.</li>
+          <li>
+            <strong>Updated:</strong> Improved text readability with responsive line heights and word-breaking settings.
+          </li>
         </ul>
-
-
+      </section>
     </div>
+    
   </main>
   <footer class="site-footer h-card">
     <div class="wrapper">

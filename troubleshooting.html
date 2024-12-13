@@ -49,106 +49,133 @@
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
       <h1 id="troubleshooting">Troubleshooting</h1>
-
       <p>If you encounter issues with the EcoFlow theme, try the following:</p>
       <ul>
         <li>Ensure you’re using the latest theme version.</li>
         <li>Check Shopify documentation for common errors.</li>
         <li>Contact support at <a href="mailto:admin@pawelsiemieniuk.com">admin@pawelsiemieniuk.com</a>.</li>
       </ul>
-
       <p>More troubleshooting tips will be added later.</p>
-
-      <h2>Common Issues</h2>
-
-      <h3>Vue.js Issues</h3>
-      <ul>
-        <li><strong>Problem</strong>: Vue app not rendering.<br>
-            <strong>Solution</strong>: Ensure the mounting DOM element (e.g., <code>#vue-app</code>) exists. Verify Vue initialization and template correctness.</li>
-      </ul>
-
-      <h3>LazySizes Issues</h3>
-      <ul>
-        <li><strong>Problem</strong>: Images not loading.<br>
-            <strong>Solution</strong>: Check <code>data-src</code> paths for correctness. Confirm LazySizes initialization in the console.</li>
-      </ul>
-
-      <h3>GSAP Issues</h3>
-      <ul>
-        <li><strong>Problem</strong>: Animations not triggering.<br>
-            <strong>Solution</strong>: Verify that target elements (<code>.element</code>, <code>.another-element</code>) are present in the DOM. Debug animation logic in <code>scripts.js</code>.</li>
-      </ul>
-
-      <h3>Social Media Links Missing</h3>
-      <ul>
-        <li>Ensure the URLs are correctly entered in <strong>Theme Settings > Social Accounts</strong>.</li>
-        <li>Check the translation file for proper <code>id</code> and <code>label</code> mappings.</li>
-      </ul>
-
-      <h3>Favicon Not Displaying</h3>
-      <ul>
-        <li>Verify the favicon is uploaded in <strong>Theme Settings > Logo</strong>.</li>
-        <li>Confirm the generated <code>&lt;link rel="icon"&gt;</code> tag in the HTML <code>&lt;head&gt;</code>.</li>
-      </ul>
-
-      <h3>Translation Issues</h3>
-      <ul>
-        <li>Ensure the <code>en.default.schema.json</code> contains all necessary entries under <code>settings_schema</code>.</li>
-        <li>Example:</li>
-        <pre><code>{
-          "settings_schema": {
-            "social_accounts": {
-              "facebook": {
-                "label": "Facebook Profile URL",
-                "info": "Enter the full URL of your Facebook profile."
-              }
-            }
-          }
-        }</code></pre>
-      </ul>
-      <h3>Responsive Breakpoints Not Working</h3>
-      <ul>
-        <li><strong>Problem</strong>: Breakpoints are not applied correctly.</li>
-        <li><strong>Solution</strong>: 
+    
+      <section aria-labelledby="common-issues">
+        <h2 id="common-issues">Common Issues</h2>
+    
+        <article aria-labelledby="vue-issues">
+          <h3 id="vue-issues">Vue.js Issues</h3>
           <ul>
-            <li>Ensure the `breakpoints.js` file is imported correctly in your GSAP scripts.</li>
-            <li>Check SCSS compilation for breakpoint syntax errors.</li>
-            <li>Verify browser developer tools to confirm correct media query matching.</li>
+            <li><strong>Problem:</strong> Vue app not rendering.<br>
+                <strong>Solution:</strong> Ensure the mounting DOM element (e.g., <code>#vue-app</code>) exists. Verify Vue initialization and template correctness.</li>
           </ul>
-        </li>
-      </ul>
-      <h2>Troubleshooting Typography Issues</h2>
-
-        <h3>1. Font Not Applying</h3>
-        <p><strong>Cause:</strong> The selected font may not be loaded correctly.</p>
-        <p><strong>Solution:</strong></p>
-        <ul>
-          <li>Ensure the font is uploaded in the correct format (<code>.woff</code>, <code>.woff2</code>, <code>.ttf</code>).</li>
-          <li>Verify the font is selected in the Theme Editor.</li>
-        </ul>
-
-        <h3>2. Text Appears Too Small on Mobile</h3>
-        <p><strong>Cause:</strong> Mobile font scaling may not be applied.</p>
-        <p><strong>Solution:</strong></p>
-        <ul>
-          <li>Check the responsive typography settings in <code>styles.scss</code>.</li>
-          <li>Ensure mobile-specific media queries are implemented correctly.</li>
-        </ul>
-
-        <h3>3. Line Length Too Long</h3>
-        <p><strong>Cause:</strong> <code>max-width</code> for paragraphs is missing.</p>
-        <p><strong>Solution:</strong></p>
-        <ul>
-          <li>Verify <code>max-width: 70ch;</code> is applied to <code>p</code> elements in <code>_typography.scss</code>.</li>
-        </ul>
-
-        <h3>4. Font Weight Not Updating</h3>
-        <p><strong>Cause:</strong> Font weight settings may not be linked to variables.</p>
-        <p><strong>Solution:</strong></p>
-        <ul>
-          <li>Check that <code>variables.$body-font-weight</code> and <code>variables.$heading-font-weight</code> are correctly referenced in <code>_typography.scss</code> and <code>styles.scss</code>.</li>
-        </ul>
+        </article>
+    
+        <article aria-labelledby="lazysizes-issues">
+          <h3 id="lazysizes-issues">LazySizes Issues</h3>
+          <ul>
+            <li><strong>Problem:</strong> Images not loading.<br>
+                <strong>Solution:</strong> Check <code>data-src</code> paths for correctness. Confirm LazySizes initialization in the console.</li>
+          </ul>
+        </article>
+    
+        <article aria-labelledby="gsap-issues">
+          <h3 id="gsap-issues">GSAP Issues</h3>
+          <ul>
+            <li><strong>Problem:</strong> Animations not triggering.<br>
+                <strong>Solution:</strong> Verify that target elements (<code>.element</code>, <code>.another-element</code>) are present in the DOM. Debug animation logic in <code>scripts.js</code>.</li>
+          </ul>
+        </article>
+    
+        <article aria-labelledby="social-media-links">
+          <h3 id="social-media-links">Social Media Links Missing</h3>
+          <ul>
+            <li>Ensure the URLs are correctly entered in <strong>Theme Settings &gt; Social Accounts</strong>.</li>
+            <li>Check the translation file for proper <code>id</code> and <code>label</code> mappings.</li>
+          </ul>
+        </article>
+    
+        <article aria-labelledby="favicon-issues">
+          <h3 id="favicon-issues">Favicon Not Displaying</h3>
+          <ul>
+            <li>Verify the favicon is uploaded in <strong>Theme Settings &gt; Logo</strong>.</li>
+            <li>Confirm the generated <code>&lt;link rel="icon"&gt;</code> tag in the HTML <code>&lt;head&gt;</code>.</li>
+          </ul>
+        </article>
+    
+        <article aria-labelledby="translation-issues">
+          <h3 id="translation-issues">Translation Issues</h3>
+          <ul>
+            <li>Ensure the <code>en.default.schema.json</code> contains all necessary entries under <code>settings_schema</code>.</li>
+            <li>Example:</li>
+            <pre><code>{
+      "settings_schema": {
+        "social_accounts": {
+          "facebook": {
+            "label": "Facebook Profile URL",
+            "info": "Enter the full URL of your Facebook profile."
+          }
+        }
+      }
+    }</code></pre>
+          </ul>
+        </article>
+    
+        <article aria-labelledby="breakpoints-issues">
+          <h3 id="breakpoints-issues">Responsive Breakpoints Not Working</h3>
+          <ul>
+            <li><strong>Problem:</strong> Breakpoints are not applied correctly.</li>
+            <li><strong>Solution:</strong>
+              <ul>
+                <li>Ensure the <code>breakpoints.js</code> file is imported correctly in your GSAP scripts.</li>
+                <li>Check SCSS compilation for breakpoint syntax errors.</li>
+                <li>Use browser developer tools to confirm correct media query matching.</li>
+              </ul>
+            </li>
+          </ul>
+        </article>
+      </section>
+    
+      <section aria-labelledby="typography-issues">
+        <h2 id="typography-issues">Troubleshooting Typography Issues</h2>
+    
+        <article aria-labelledby="font-not-applying">
+          <h3 id="font-not-applying">1. Font Not Applying</h3>
+          <p><strong>Cause:</strong> The selected font may not be loaded correctly.</p>
+          <p><strong>Solution:</strong></p>
+          <ul>
+            <li>Ensure the font is uploaded in the correct format (<code>.woff</code>, <code>.woff2</code>, <code>.ttf</code>).</li>
+            <li>Verify the font is selected in the Theme Editor.</li>
+          </ul>
+        </article>
+    
+        <article aria-labelledby="text-small-mobile">
+          <h3 id="text-small-mobile">2. Text Appears Too Small on Mobile</h3>
+          <p><strong>Cause:</strong> Mobile font scaling may not be applied.</p>
+          <p><strong>Solution:</strong></p>
+          <ul>
+            <li>Check the responsive typography settings in <code>styles.scss</code>.</li>
+            <li>Ensure mobile-specific media queries are implemented correctly.</li>
+          </ul>
+        </article>
+    
+        <article aria-labelledby="line-length">
+          <h3 id="line-length">3. Line Length Too Long</h3>
+          <p><strong>Cause:</strong> <code>max-width</code> for paragraphs is missing.</p>
+          <p><strong>Solution:</strong></p>
+          <ul>
+            <li>Verify <code>max-width: 70ch;</code> is applied to <code>p</code> elements in <code>_typography.scss</code>.</li>
+          </ul>
+        </article>
+    
+        <article aria-labelledby="font-weight-issue">
+          <h3 id="font-weight-issue">4. Font Weight Not Updating</h3>
+          <p><strong>Cause:</strong> Font weight settings may not be linked to variables.</p>
+          <p><strong>Solution:</strong></p>
+          <ul>
+            <li>Check that <code>variables.$body-font-weight</code> and <code>variables.$heading-font-weight</code> are correctly referenced in <code>_typography.scss</code> and <code>styles.scss</code>.</li>
+          </ul>
+        </article>
+      </section>
     </div>
+    
   </main>
   <footer class="site-footer h-card">
     <div class="wrapper">
