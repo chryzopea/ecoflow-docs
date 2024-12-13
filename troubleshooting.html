@@ -117,7 +117,37 @@
           </ul>
         </li>
       </ul>
-      
+      <h2>Troubleshooting Typography Issues</h2>
+
+        <h3>1. Font Not Applying</h3>
+        <p><strong>Cause:</strong> The selected font may not be loaded correctly.</p>
+        <p><strong>Solution:</strong></p>
+        <ul>
+          <li>Ensure the font is uploaded in the correct format (<code>.woff</code>, <code>.woff2</code>, <code>.ttf</code>).</li>
+          <li>Verify the font is selected in the Theme Editor.</li>
+        </ul>
+
+        <h3>2. Text Appears Too Small on Mobile</h3>
+        <p><strong>Cause:</strong> Mobile font scaling may not be applied.</p>
+        <p><strong>Solution:</strong></p>
+        <ul>
+          <li>Check the responsive typography settings in <code>styles.scss</code>.</li>
+          <li>Ensure mobile-specific media queries are implemented correctly.</li>
+        </ul>
+
+        <h3>3. Line Length Too Long</h3>
+        <p><strong>Cause:</strong> <code>max-width</code> for paragraphs is missing.</p>
+        <p><strong>Solution:</strong></p>
+        <ul>
+          <li>Verify <code>max-width: 70ch;</code> is applied to <code>p</code> elements in <code>_typography.scss</code>.</li>
+        </ul>
+
+        <h3>4. Font Weight Not Updating</h3>
+        <p><strong>Cause:</strong> Font weight settings may not be linked to variables.</p>
+        <p><strong>Solution:</strong></p>
+        <ul>
+          <li>Check that <code>variables.$body-font-weight</code> and <code>variables.$heading-font-weight</code> are correctly referenced in <code>_typography.scss</code> and <code>styles.scss</code>.</li>
+        </ul>
     </div>
   </main>
   <footer class="site-footer h-card">
