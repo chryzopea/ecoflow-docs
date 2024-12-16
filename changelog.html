@@ -70,14 +70,14 @@
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
       <h1 id="changelog">Changelog</h1>
-    
+  
       <section aria-labelledby="release-100">
         <h2 id="release-100">[1.0.0] - Initial Release</h2>
         <ul>
           <li>Initial theme features.</li>
         </ul>
       </section>
-    
+  
       <section aria-labelledby="documentation-links">
         <h2 id="documentation-links">Documentation Links</h2>
         <ul>
@@ -86,43 +86,37 @@
           <li><a href="CHANGELOG.md">Changelog</a></li>
         </ul>
       </section>
-    
+  
       <section aria-labelledby="compliance">
         <h2 id="compliance">[1.1.0] - Header HTML Compliance</h2>
         <ul>
           <li>
-            <strong>Added JSON-LD Support:</strong>
-            Implemented structured data for SEO across product, collection, blog, contact, and homepage templates. Ensures compatibility with Google Rich Results Test and improves search visibility.
-            <strong>Includes Translation Support:</strong> JSON-LD fields now support multilingual themes via <code>en.default.schema.json</code> entries.
+            <strong>Added JSON-LD Support:</strong> Implemented structured data for SEO across product, collection, blog, contact, and homepage templates. <a href="setup.md#json-ld">See JSON-LD Setup</a>.
           </li>
           <li>
-            <strong>Integrated Dynamic Social Media Links:</strong>
-            Dynamically generated <code>sameAs</code> links for social platforms based on Shopify theme settings. Supported platforms include Facebook, Instagram, YouTube, TikTok, Pinterest, Snapchat, Tumblr, and Vimeo.
-            <strong>Localized Labels and Descriptions:</strong> Social account settings now include translations for UI clarity.
+            <strong>Integrated Dynamic Social Media Links:</strong> Dynamically generated <code>sameAs</code> links for social platforms based on Shopify theme settings. Supported platforms include Facebook, Instagram, YouTube, TikTok, Pinterest, Snapchat, Tumblr, and Vimeo. <a href="features.md#social-media">Learn More</a>.
           </li>
           <li>
-            <strong>Added Meta Tags for SEO:</strong>
-            <code>&lt;meta name="robots" content="index, follow"&gt;</code> ensures pages are indexed and links followed by search engines.
-            <code>&lt;link rel="icon"&gt;</code> dynamically references the favicon set in theme settings. Meta tag descriptions and labels are translation-ready.
+            <strong>Added Meta Tags for SEO:</strong> Enhanced search engine indexing and multilingual support for meta tags and favicon settings. <a href="troubleshooting.md#meta-tags">Troubleshooting Meta Tags</a>.
           </li>
         </ul>
       </section>
-    
+  
       <section aria-labelledby="vue-js-gsap-lazysizes">
         <h2 id="vue-js-gsap-lazysizes">[1.2.0] - Vue.js, GSAP, and LazySizes Configuration</h2>
         <ul>
           <li>
-            <strong>Vue.js:</strong> Configured with <code>esm-bundler</code> for Shopify compatibility. Successfully rendered a Vue app within the <code>#vue-app</code> element.
+            <strong>Vue.js:</strong> Configured with <code>esm-bundler</code> for Shopify compatibility. Improves interactivity for merchant stores. <a href="setup.md#vue-js">Vue.js Setup</a>.
           </li>
           <li>
-            <strong>GSAP:</strong> Implemented animations for <code>.element</code> (slide) and <code>.another-element</code> (fade).
+            <strong>GSAP:</strong> Implemented animations for <code>.element</code> (slide) and <code>.another-element</code> (fade). Enhances user experience through dynamic transitions. <a href="features.md#animations">Learn About Animations</a>.
           </li>
           <li>
-            <strong>LazySizes:</strong> Integrated for optimized image loading using <code>data-src</code> attributes.
+            <strong>LazySizes:</strong> Integrated for optimized image loading using <code>data-src</code> attributes. Boosts performance by deferring non-visible images. <a href="troubleshooting.md#lazy-sizes">LazySizes Troubleshooting</a>.
           </li>
         </ul>
       </section>
-    
+  
       <section aria-labelledby="typography">
         <h2 id="typography">[1.3.0] - Typography</h2>
         <ul>
@@ -131,7 +125,7 @@
             <ul>
               <li>Responsive Typography System:
                 <ul>
-                  <li>Support for all heading levels (<code>H1</code>–<code>H6</code>) and body text.</li>
+                  <li>Support for all heading levels (<code>H1</code>–<code>H6</code>) and body text. <a href="setup.md#typography">Typography Guide</a>.</li>
                   <li>Dynamic font sizing using <code>clamp()</code> for fluid responsiveness.</li>
                   <li>Customizable fonts, sizes, line heights, and weights via the Theme Editor.</li>
                   <li>Golden ratio-based scaling for harmonious design.</li>
@@ -144,7 +138,7 @@
           </li>
         </ul>
       </section>
-
+  
       <section aria-labelledby="colors">
         <h2 id="colors">[1.4.0] - Colors</h2>
         <ul>
@@ -152,13 +146,13 @@
             <strong>Added:</strong>
             <ul>
               <li>
-                <strong>Global Colors Settings:</strong> Added customizable options for body background color, body text color, heading text color, and paragraph text color with default values for fallback.
+                <strong>Global Colors Settings:</strong> Added customizable options for body background color, body text color, heading text color, and paragraph text color. Default values provide consistent fallback. <a href="features.md#color-settings">Color Customization Guide</a>.
               </li>
               <li>
-                <strong>Paragraph Text Alignment:</strong> Introduced a new setting to control paragraph text alignment with options for left, center, right, or justify.
+                <strong>Paragraph Text Alignment:</strong> New setting to control alignment (left, center, right, justify).
               </li>
               <li>
-                <strong>Responsive Design:</strong> Defined Shopify Dawn breakpoints for mobile, tablet, and desktop views for consistent layout behavior.
+                <strong>Responsive Design:</strong> Defined Shopify Dawn breakpoints for mobile, tablet, and desktop views to ensure layout consistency. <a href="setup.md#responsive-design">Responsive Design Setup</a>.
               </li>
               <li>
                 <strong>SCSS Enhancements:</strong> Linked new global color settings to CSS variables for reusable styling and added dynamic breakpoints.
@@ -171,8 +165,8 @@
         </ul>
       </section>
     </div>
-    
   </main>
+  
   <footer class="site-footer h-card">
     <div class="wrapper">
       <h2 class="footer-heading">EcoFlow Documentation</h2>

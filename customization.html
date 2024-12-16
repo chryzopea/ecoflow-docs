@@ -50,17 +50,17 @@
     <div class="wrapper">
       <h1 id="customization-instructions">Customization Instructions</h1>
       <p>Learn how to customize the EcoFlow Shopify theme to suit your needs.</p>
-    
+  
       <section aria-labelledby="available-options">
         <h2 id="available-options">Available Options</h2>
         <ul>
-          <li>Change color schemes.</li>
-          <li>Add custom branding elements.</li>
-          <li>Modify layout settings.</li>
+          <li>Change color schemes to align with your brand.</li>
+          <li>Add custom branding elements like logos and banners.</li>
+          <li>Modify layout settings for personalized store design.</li>
         </ul>
-        <p>Detailed customization steps will be available soon.</p>
+        <p><em>[Coming Soon: Detailed steps for advanced customization.]</em></p>
       </section>
-    
+  
       <section aria-labelledby="managing-social-media-links">
         <h2 id="managing-social-media-links">Managing Social Media Links</h2>
         <ol>
@@ -84,8 +84,9 @@
             <strong>Translation Support</strong>: Labels and tooltips for social media fields are defined in <code>en.default.schema.json</code> under <code>social_accounts</code>.
           </li>
         </ol>
+        <p><strong>Note:</strong> If links don’t appear, ensure URLs are entered correctly and saved.</p>
       </section>
-    
+  
       <section aria-labelledby="setting-the-favicon">
         <h2 id="setting-the-favicon">Setting the Favicon</h2>
         <ol>
@@ -99,8 +100,9 @@
             <strong>Translation Support</strong>: The "Favicon" label and info text are defined in <code>en.default.schema.json</code> under <code>settings_schema.logo</code>.
           </li>
         </ol>
+        <p><strong>Note:</strong> Ensure the uploaded favicon meets Shopify’s size and format requirements.</p>
       </section>
-    
+  
       <section aria-labelledby="social-media-metadata">
         <h2 id="social-media-metadata">Social Media Metadata</h2>
         <ol>
@@ -116,8 +118,9 @@
             <strong>Translation Support</strong>: Labels and descriptions for these fields are defined in <code>en.default.schema.json</code> under <code>settings_schema.social_meta</code>.
           </li>
         </ol>
+        <p><strong>Tip:</strong> Use a high-quality image (1200x630px) for optimal appearance on social media platforms.</p>
       </section>
-    
+  
       <section aria-labelledby="using-json-ld">
         <h2 id="using-json-ld">Using JSON-LD</h2>
         <p>JSON-LD is automatically included based on the page type:</p>
@@ -127,13 +130,14 @@
           <li><strong>Blog Pages</strong>: Includes metadata for blog articles.</li>
           <li><strong>Index and Contact Pages</strong>: Includes structured data for <code>WebPage</code> or <code>ContactPage</code>.</li>
         </ul>
+        <p><strong>Note:</strong> Validate structured data using <a href="https://search.google.com/test/rich-results">Google Rich Results Test</a> for accuracy.</p>
       </section>
-    
+  
       <section aria-labelledby="responsive-customization">
         <h2 id="responsive-customization">Responsive Customization</h2>
         <p>The EcoFlow Shopify theme includes centralized breakpoints for responsive styling and animations.</p>
         <ul>
-          <li>Breakpoints are defined in a single `breakpoints.js` file for consistency across styles and animations.</li>
+          <li>Breakpoints are defined in a single <code>breakpoints.js</code> file for consistency across styles and animations.</li>
           <li>Modify breakpoints in one place to update both SCSS and GSAP animations.</li>
         </ul>
         <h3>Breakpoints Overview</h3>
@@ -142,8 +146,9 @@
           <li><strong>Tablet</strong>: max-width: 1024px</li>
           <li><strong>Desktop</strong>: min-width: 1025px</li>
         </ul>
+        <p><strong>Tip:</strong> Test your changes on multiple devices to ensure consistent responsiveness.</p>
       </section>
-    
+  
       <section aria-labelledby="typography-customization">
         <h2 id="typography-customization">Typography Customization</h2>
         <p>The EcoFlow theme allows full control over typography directly in the Theme Editor.</p>
@@ -177,7 +182,7 @@
         <h3>Preview Changes</h3>
         <p>Use the responsive preview tool to ensure the typography adjusts well across devices.</p>
       </section>
-
+  
       <section aria-labelledby="color-customization">
         <h2 id="color-customization">Color Customization</h2>
         <ul>
@@ -195,7 +200,7 @@
             <strong>Paragraph Alignment:</strong> In the Theme Editor under <em>Typography</em>, select the desired text alignment for paragraphs (left, center, right, justify).
           </li>
           <li>
-            <strong>SCSS Variables:</strong> Customize SCSS variables in your `styles.scss` file for advanced modifications:
+            <strong>SCSS Variables:</strong> Customize SCSS variables in your <code>styles.scss</code> file for advanced modifications:
             <ul>
               <li><code>$body-background-color: var(--background-color);</code></li>
               <li><code>$body-text-color: var(--body-text-color);</code></li>
@@ -204,12 +209,13 @@
             </ul>
           </li>
         </ul>
-        
+  
         <h3>Preview Changes</h3>
         <p>Use the responsive preview tool to ensure the typography adjusts well across devices.</p>
       </section>
-    </div>    
+    </div>
   </main>
+  
   <footer class="site-footer h-card">
     <div class="wrapper">
       <h2 class="footer-heading">EcoFlow Documentation</h2>
