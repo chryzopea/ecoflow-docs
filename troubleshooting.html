@@ -49,16 +49,22 @@
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
       <h1 id="troubleshooting">Troubleshooting</h1>
-      <p>If you encounter issues with the EcoFlow theme, try the following:</p>
-      <ul>
-        <li>Ensure you’re using the latest theme version.</li>
-        <li>Check Shopify documentation for common errors.</li>
-        <li>Contact support at <a href="mailto:admin@pawelsiemieniuk.com">admin@pawelsiemieniuk.com</a>.</li>
-      </ul>
-      <p><em>Note:</em> More troubleshooting tips will be added based on user feedback.</p>
+      <p>If you encounter issues with the EcoFlow theme, follow these steps to resolve common problems or contact support if needed.</p>
   
-      <section aria-labelledby="common-issues">
-        <h2 id="common-issues">Common Issues</h2>
+      <section aria-labelledby="merchant-troubleshooting">
+        <h2 id="merchant-troubleshooting">Merchant Troubleshooting</h2>
+        <ul>
+          <li><strong>Problem:</strong> Social media links missing.<br>
+              <strong>Solution:</strong> Verify profile URLs in <strong>Theme Settings &gt; Social Accounts</strong>. Ensure they are entered correctly.</li>
+          <li><strong>Problem:</strong> Favicon not displaying.<br>
+              <strong>Solution:</strong> Check if the favicon is uploaded in <strong>Theme Settings &gt; Logo</strong>. Verify the correct favicon reference in the browser's developer tools under the <code>&lt;head&gt;</code> section.</li>
+          <li><strong>Problem:</strong> Font not applying.<br>
+              <strong>Solution:</strong> Ensure the correct font is selected in the Typography section of the Theme Editor. Verify that the uploaded font files are in compatible formats (<code>.woff</code>, <code>.woff2</code>, <code>.ttf</code>).</li>
+        </ul>
+      </section>
+  
+      <section aria-labelledby="developer-troubleshooting">
+        <h2 id="developer-troubleshooting">Developer Troubleshooting</h2>
   
         <article aria-labelledby="vue-issues">
           <h3 id="vue-issues">Vue.js Issues</h3>
@@ -66,21 +72,21 @@
             <li><strong>Problem:</strong> Vue app not rendering.<br>
                 <strong>Solution:</strong>
                 <ol>
-                  <li>Ensure the mounting DOM element (e.g., <code>#vue-app</code>) exists in your Liquid file.</li>
-                  <li>Verify that Vue is properly initialized and the template syntax is correct.</li>
+                  <li>Ensure the mounting DOM element exists in your Liquid file (e.g., <code>#vue-app</code>).</li>
+                  <li>Verify that Vue is properly initialized and no syntax errors exist in the script.</li>
                 </ol>
             </li>
           </ul>
         </article>
   
         <article aria-labelledby="lazysizes-issues">
-          <h3 id="lazysizes-issues">LazySizes Issues ⚠️</h3>
+          <h3 id="lazysizes-issues">LazySizes Issues</h3>
           <ul>
             <li><strong>Problem:</strong> Images not loading.<br>
                 <strong>Solution:</strong>
                 <ol>
-                  <li>Ensure <code>data-src</code> paths are correct in your image tags.</li>
-                  <li>Open the browser console to check if LazySizes is initializing without errors.</li>
+                  <li>Verify that <code>data-src</code> paths are correct in your image tags.</li>
+                  <li>Check the browser console for LazySizes initialization errors.</li>
                 </ol>
             </li>
           </ul>
@@ -92,58 +98,8 @@
             <li><strong>Problem:</strong> Animations not triggering.<br>
                 <strong>Solution:</strong>
                 <ol>
-                  <li>Verify the target elements (<code>.element</code>, <code>.another-element</code>) exist in the DOM.</li>
+                  <li>Ensure target elements exist in the DOM (e.g., <code>.element</code>, <code>.another-element</code>).</li>
                   <li>Debug animation logic in your <code>scripts.js</code> file using browser developer tools.</li>
-                </ol>
-            </li>
-          </ul>
-        </article>
-  
-        <article aria-labelledby="social-media-links">
-          <h3 id="social-media-links">Social Media Links Missing</h3>
-          <ul>
-            <li><strong>Problem:</strong> Social media links are not appearing on your site.<br>
-                <strong>Solution:</strong>
-                <ol>
-                  <li>Ensure the URLs are correctly entered in <strong>Theme Settings &gt; Social Accounts</strong>.</li>
-                  <li>Check the translation file (<code>en.default.schema.json</code>) for proper <code>id</code> and <code>label</code> mappings.</li>
-                </ol>
-            </li>
-          </ul>
-        </article>
-  
-        <article aria-labelledby="favicon-issues">
-          <h3 id="favicon-issues">Favicon Not Displaying</h3>
-          <ul>
-            <li><strong>Problem:</strong> Favicon does not appear in the browser tab.<br>
-                <strong>Solution:</strong>
-                <ol>
-                  <li>Verify the favicon is uploaded under <strong>Theme Settings &gt; Logo</strong>.</li>
-                  <li>Check the HTML <code>&lt;head&gt;</code> tag for the correct <code>&lt;link rel="icon"&gt;</code> reference.</li>
-                </ol>
-            </li>
-          </ul>
-        </article>
-  
-        <article aria-labelledby="translation-issues">
-          <h3 id="translation-issues">Translation Issues</h3>
-          <ul>
-            <li><strong>Problem:</strong> Translated labels are not appearing correctly.<br>
-                <strong>Solution:</strong>
-                <ol>
-                  <li>Ensure the <code>en.default.schema.json</code> file contains all necessary entries under <code>settings_schema</code>.</li>
-                  <li>Example:
-                    <pre><code>{
-    "settings_schema": {
-      "social_accounts": {
-        "facebook": {
-          "label": "Facebook Profile URL",
-          "info": "Enter the full URL of your Facebook profile."
-        }
-      }
-    }
-  }</code></pre>
-                  </li>
                 </ol>
             </li>
           </ul>
@@ -157,15 +113,15 @@
                 <ol>
                   <li>Ensure the <code>breakpoints.js</code> file is correctly imported into your GSAP scripts.</li>
                   <li>Check SCSS compilation logs for syntax errors related to breakpoints.</li>
-                  <li>Use browser developer tools to verify that media queries are being applied.</li>
+                  <li>Use browser developer tools to verify that media queries are applied correctly.</li>
                 </ol>
             </li>
           </ul>
         </article>
       </section>
   
-      <section aria-labelledby="typography-issues">
-        <h2 id="typography-issues">Typography Troubleshooting</h2>
+      <section aria-labelledby="typography-troubleshooting">
+        <h2 id="typography-troubleshooting">Typography Troubleshooting</h2>
   
         <article aria-labelledby="font-not-applying">
           <h3 id="font-not-applying">Font Not Applying</h3>
@@ -187,36 +143,17 @@
                 <strong>Solution:</strong>
                 <ol>
                   <li>Check the responsive typography settings in your <code>styles.scss</code> file.</li>
-                  <li>Ensure mobile-specific media queries are correctly implemented.</li>
+                  <li>Ensure mobile-specific media queries are implemented correctly in your SCSS files.</li>
                 </ol>
             </li>
           </ul>
         </article>
       </section>
   
-      <section aria-labelledby="color-issues">
-        <h2 id="color-issues">Color Troubleshooting</h2>
-        <ul>
-          <li><strong>Problem:</strong> Colors are not applying.<br>
-              <strong>Solution:</strong>
-              <ol>
-                <li>Ensure the color settings in the Theme Editor are not left blank.</li>
-                <li>Check for typos in SCSS variables or CSS <code>:root</code> declarations.</li>
-              </ol>
-          </li>
-          <li><strong>Problem:</strong> Paragraph alignment settings are not working.<br>
-              <strong>Solution:</strong>
-              <ol>
-                <li>Verify alignment settings in the Theme Editor under <strong>Typography</strong>.</li>
-                <li>Check for conflicting styles in custom sections or additional CSS.</li>
-              </ol>
-          </li>
-        </ul>
-      </section>
-  
-      <p><em>Have a unique issue? Contact support or report it for future troubleshooting updates.</em></p>
+
     </div>
   </main>
+  
   
   <footer class="site-footer h-card">
     <div class="wrapper">
