@@ -60,6 +60,15 @@
                 <li><a href="#gsap-animations-not-triggering">GSAP Animations Not Triggering</a></li>
                 <li><a href="#responsive-breakpoints-not-working">Responsive Breakpoints Not Working</a></li>
                 <li><a href="#text-too-small-mobile">Text Appears Too Small on Mobile</a></li>
+                <li><a href="#background-image-opacity-issue">Background Image or Video Appears Faded</a></li>
+                <li><a href="#section-width-not-changing">Section Width Not Changing</a></li>
+                <li><a href="#section-spacing-not-applying">Section Spacing Not Applying</a></li>
+                <li><a href="#fallback-image-not-loading">Fallback Image for Video Not Loading</a></li>
+                <li><a href="#borders-not-visible">Borders Not Visible</a></li>
+                <li><a href="#typography-alignment-not-reflecting">Typography Alignment Not Reflecting</a></li>
+                <li><a href="#dynamic-blend-modes-not-working">Dynamic Blend Modes Not Working</a></li>
+                <li><a href="#mobile-specific-backgrounds-not-displaying">Mobile-Specific Backgrounds Not Displaying</a></li>
+                <li><a href="#changes-not-visible">Changes Not Visible After Saving</a></li>
                 <li><a href="#logo-does-not-display">Logo Doesn't Display Properly</a></li>
                 <li><a href="#custom-logo-url-not-working">Custom Logo URL Not Working</a></li>
                 <li><a href="#logo-alignment-issue">Logo Alignment Looks Off</a></li>
@@ -82,90 +91,75 @@
             <h3 id="font-not-applying">Problem: Font not applying</h3>
             <p><strong>Solution:</strong> Ensure the correct font is selected in the Typography section of the Theme Editor. Verify that the uploaded font files are in compatible formats (<code>.woff</code>, <code>.woff2</code>, <code>.ttf</code>).</p>
 
-            <h3 id="vue-app-not-rendering">Problem: Vue.js app not rendering</h3>
+            <h3 id="background-image-opacity-issue">Problem: Background image or video appears faded</h3>
             <p><strong>Solution:</strong></p>
             <ol>
-                <li>Ensure the mounting DOM element exists in your Liquid file (e.g., <code>#vue-app</code>).</li>
-                <li>Verify that Vue is properly initialized and no syntax errors exist in the script.</li>
+                <li>Navigate to the "Background Settings" in the Theme Editor.</li>
+                <li>Set the <strong>Background Opacity</strong> to <code>0</code> for full visibility of the image or video.</li>
+                <li>Ensure the <strong>Background Color</strong> is set to transparent if no overlay is desired.</li>
             </ol>
 
-            <h3 id="images-not-loading">Problem: Images not loading (LazySizes)</h3>
+            <h3 id="section-width-not-changing">Problem: Section width not changing</h3>
             <p><strong>Solution:</strong></p>
             <ol>
-                <li>Verify that <code>data-src</code> paths are correct in your image tags.</li>
-                <li>Check the browser console for LazySizes initialization errors.</li>
+                <li>Verify the "Section Width" setting in the Theme Editor.</li>
+                <li>Ensure CSS variables for width are applied correctly in your custom styles or overrides.</li>
             </ol>
 
-            <h3 id="gsap-animations-not-triggering">Problem: GSAP animations not triggering</h3>
+            <h3 id="section-spacing-not-applying">Problem: Section spacing not applying</h3>
             <p><strong>Solution:</strong></p>
             <ol>
-                <li>Ensure target elements exist in the DOM (e.g., <code>.element</code>, <code>.another-element</code>).</li>
-                <li>Debug animation logic in your <code>scripts.js</code> file using browser developer tools.</li>
+                <li>Ensure the "Use Local Margin Overrides" option is enabled for the section.</li>
+                <li>Verify that padding and margin values are set in the Theme Editor for both desktop and mobile views.</li>
             </ol>
 
-            <h3 id="responsive-breakpoints-not-working">Problem: Responsive breakpoints not working</h3>
+            <h3 id="fallback-image-not-loading">Problem: Fallback image for video not loading</h3>
             <p><strong>Solution:</strong></p>
             <ol>
-                <li>Ensure the <code>breakpoints.js</code> file is correctly imported into your GSAP scripts.</li>
-                <li>Check SCSS compilation logs for syntax errors related to breakpoints.</li>
-                <li>Use browser developer tools to verify that media queries are applied correctly.</li>
+                <li>Ensure a fallback image is uploaded in the "Mobile Video Fallback Image" field.</li>
+                <li>Verify that the image format is either JPEG or PNG and is correctly sized.</li>
             </ol>
 
-            <h3 id="text-too-small-mobile">Problem: Text appears too small on mobile</h3>
+            <h3 id="borders-not-visible">Problem: Borders not visible</h3>
             <p><strong>Solution:</strong></p>
             <ol>
-                <li>Check the responsive typography settings in your <code>styles.scss</code> file.</li>
-                <li>Ensure mobile-specific media queries are implemented correctly in your SCSS files.</li>
+                <li>Ensure border width is greater than <code>0px</code>.</li>
+                <li>Verify the border style is not set to "none" in the section settings.</li>
+                <li>Confirm that the border color is not transparent.</li>
             </ol>
 
-            <h3 id="logo-does-not-display">Problem: Logo doesn't display properly</h3>
+            <h3 id="typography-alignment-not-reflecting">Problem: Typography alignment not reflecting</h3>
             <p><strong>Solution:</strong></p>
             <ol>
-                <li>Check the file format:
-                    <ul>
-                        <li>Ensure the logo is in PNG or JPEG format. Other formats like SVG are not supported in the Theme Editor.</li>
-                    </ul>
-                </li>
-                <li>Verify the upload:
-                    <ul>
-                        <li>Confirm the logo is uploaded and saved in the Theme Editor.</li>
-                    </ul>
-                </li>
-                <li>Check file size or resolution:
-                    <ul>
-                        <li>Ensure the file size is under 1MB and the width does not exceed 450px.</li>
-                    </ul>
-                </li>
-                <li>Ensure alt text is present:
-                    <ul>
-                        <li>If the alt text is missing, add a description in the "Alt Text for Logo" field in the Theme Editor.</li>
-                    </ul>
-                </li>
+                <li>Check the "Content Alignment" setting in the Theme Editor.</li>
+                <li>Inspect the CSS for potential conflicts with other styles or customizations.</li>
             </ol>
 
-            <h3 id="custom-logo-url-not-working">Problem: Custom logo URL not working</h3>
+            <h3 id="dynamic-blend-modes-not-working">Problem: Dynamic blend modes not working</h3>
             <p><strong>Solution:</strong></p>
             <ol>
-                <li>Verify the custom URL is entered correctly in the "Custom Logo URL" field.</li>
-                <li>Ensure the URL starts with <code>https://</code>.</li>
+                <li>Ensure the blend mode selected in the Theme Editor is supported by your target browsers.</li>
+                <li>Verify that the background image or color is properly configured to interact with the blend mode.</li>
             </ol>
 
-            <h3 id="logo-alignment-issue">Problem: Logo alignment looks off</h3>
+            <h3 id="mobile-specific-backgrounds-not-displaying">Problem: Mobile-specific backgrounds not displaying</h3>
             <p><strong>Solution:</strong></p>
             <ol>
-                <li>Check the "Logo Alignment" setting in the Theme Editor.</li>
-                <li>Adjust the alignment as needed (Left, Center, or Right).</li>
+                <li>Ensure the "Enable Mobile Background" or "Enable Mobile Background Image" settings are active.</li>
+                <li>Preview the mobile view in the Theme Editor to confirm the settings are applied.</li>
             </ol>
 
-            <h3 id="logo-scaling-issue-mobile">Problem: Logo scaling issues on mobile</h3>
+            <h3 id="changes-not-visible">Problem: Changes not visible after saving</h3>
             <p><strong>Solution:</strong></p>
             <ol>
-                <li>Ensure the logo file is responsive.</li>
-                <li>Use the Theme Editor's preview feature to check how it appears on mobile.</li>
+                <li>Verify that the changes are saved in the Theme Editor.</li>
+                <li>Clear the browser cache and refresh the page.</li>
+                <li>Check the Shopify admin for any errors in saving the theme settings.</li>
             </ol>
         </section>
     </div>
 </main>
+
 
   
   <footer class="site-footer h-card">
