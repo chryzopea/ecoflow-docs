@@ -91,6 +91,42 @@
             <h3 id="font-not-applying">Problem: Font not applying</h3>
             <p><strong>Solution:</strong> Ensure the correct font is selected in the Typography section of the Theme Editor. Verify that the uploaded font files are in compatible formats (<code>.woff</code>, <code>.woff2</code>, <code>.ttf</code>).</p>
 
+            <h3 id="vue-app-not-rendering">Problem: Vue.js app not rendering</h3>
+            <p><strong>Solution:</strong></p>
+            <ol>
+                <li>Ensure the mounting DOM element exists in your Liquid file (e.g., <code>#vue-app</code>).</li>
+                <li>Verify that Vue is properly initialized and no syntax errors exist in the script.</li>
+            </ol>
+
+            <h3 id="images-not-loading">Problem: Images not loading (LazySizes)</h3>
+            <p><strong>Solution:</strong></p>
+            <ol>
+                <li>Verify that <code>data-src</code> paths are correct in your image tags.</li>
+                <li>Check the browser console for LazySizes initialization errors.</li>
+            </ol>
+
+            <h3 id="gsap-animations-not-triggering">Problem: GSAP animations not triggering</h3>
+            <p><strong>Solution:</strong></p>
+            <ol>
+                <li>Ensure target elements exist in the DOM (e.g., <code>.element</code>, <code>.another-element</code>).</li>
+                <li>Debug animation logic in your <code>scripts.js</code> file using browser developer tools.</li>
+            </ol>
+
+            <h3 id="responsive-breakpoints-not-working">Problem: Responsive breakpoints not working</h3>
+            <p><strong>Solution:</strong></p>
+            <ol>
+                <li>Ensure the <code>breakpoints.js</code> file is correctly imported into your GSAP scripts.</li>
+                <li>Check SCSS compilation logs for syntax errors related to breakpoints.</li>
+                <li>Use browser developer tools to verify that media queries are applied correctly.</li>
+            </ol>
+
+            <h3 id="text-too-small-mobile">Problem: Text appears too small on mobile</h3>
+            <p><strong>Solution:</strong></p>
+            <ol>
+                <li>Check the responsive typography settings in your <code>styles.scss</code> file.</li>
+                <li>Ensure mobile-specific media queries are implemented correctly in your SCSS files.</li>
+            </ol>
+
             <h3 id="background-image-opacity-issue">Problem: Background image or video appears faded</h3>
             <p><strong>Solution:</strong></p>
             <ol>
@@ -156,12 +192,56 @@
                 <li>Clear the browser cache and refresh the page.</li>
                 <li>Check the Shopify admin for any errors in saving the theme settings.</li>
             </ol>
+
+            <h3 id="logo-does-not-display">Problem: Logo doesn't display properly</h3>
+            <p><strong>Solution:</strong></p>
+            <ol>
+                <li>Check the file format:
+                    <ul>
+                        <li>Ensure the logo is in PNG or JPEG format. Other formats like SVG are not supported in the Theme Editor.</li>
+                    </ul>
+                </li>
+                <li>Verify the upload:
+                    <ul>
+                        <li>Confirm the logo is uploaded and saved in the Theme Editor.</li>
+                    </ul>
+                </li>
+                <li>Check file size or resolution:
+                    <ul>
+                        <li>Ensure the file size is under 1MB and the width does not exceed 450px.</li>
+                    </ul>
+                </li>
+                <li>Ensure alt text is present:
+                    <ul>
+                        <li>If the alt text is missing, add a description in the "Alt Text for Logo" field in the Theme Editor.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <h3 id="custom-logo-url-not-working">Problem: Custom logo URL not working</h3>
+            <p><strong>Solution:</strong></p>
+            <ol>
+                <li>Verify the custom URL is entered correctly in the "Custom Logo URL" field.</li>
+                <li>Ensure the URL starts with <code>https://</code>.</li>
+            </ol>
+
+            <h3 id="logo-alignment-issue">Problem: Logo alignment looks off</h3>
+            <p><strong>Solution:</strong></p>
+            <ol>
+                <li>Check the "Logo Alignment" setting in the Theme Editor.</li>
+                <li>Adjust the alignment as needed (Left, Center, or Right).</li>
+            </ol>
+
+            <h3 id="logo-scaling-issue-mobile">Problem: Logo scaling issues on mobile</h3>
+            <p><strong>Solution:</strong></p>
+            <ol>
+                <li>Ensure the logo file is responsive.</li>
+                <li>Use the Theme Editor's preview feature to check how it appears on mobile.</li>
+            </ol>
         </section>
     </div>
 </main>
 
-
-  
   <footer class="site-footer h-card">
     <div class="wrapper">
       <h2 class="footer-heading">EcoFlow Documentation</h2>
