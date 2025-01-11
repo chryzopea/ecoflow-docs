@@ -107,20 +107,74 @@
         </li>
       </ol>
 
+      <h3 id="eco-mode-setup">Eco Mode Setup</h3>
+      <ol>
+        <li>
+          <strong>Enable Eco Mode:</strong>
+          <ul>
+            <li>Navigate to <strong>Theme Settings &gt; Eco Mode</strong> in the Shopify Theme Editor.</li>
+            <li>Use the toggle to enable or disable Eco Mode for your store.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Customize Eco Mode Colors:</strong>
+          <ul>
+            <li>In <strong>Theme Settings &gt; Eco Mode Colors</strong>, configure colors for:
+              <ul>
+                <li>Body Background</li>
+                <li>Body Text</li>
+                <li>Heading Text</li>
+                <li>Paragraph Text</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Manage Background Videos:</strong>
+          <ul>
+            <li>Assign a fallback image to background videos by adding the <code>data-fallback-image</code> attribute in the video HTML.</li>
+            <li>Fallback images will replace videos when Eco Mode is enabled.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Preview Eco Mode:</strong>
+          <ul>
+            <li>Test your site with Eco Mode enabled and disabled to confirm animations, videos, and colors behave as expected.</li>
+            <li>Use multiple devices (desktop, tablet, mobile) to verify consistent performance.</li>
+          </ul>
+        </li>
+      </ol>      
+
       <h3>Verification and Testing</h3>
-      <ul>
-        <li>Preview your store using Shopify’s built-in preview tool to ensure all customizations are applied correctly.</li>
-        <li>Verify typography, social media links, metadata, and section settings display as expected.</li>
-        <li>Test responsiveness on mobile, tablet, and desktop devices.</li>
-        <li>Validate structured data using <a href="https://search.google.com/test/rich-results">Google’s Rich Results Test</a> to ensure proper SEO implementation.</li>
-      </ul>
+<ul>
+  <li>Preview your store using Shopify’s built-in preview tool to ensure all customizations are applied correctly.</li>
+  <li>Verify typography, social media links, metadata, and section settings display as expected.</li>
+  <li>Test responsiveness on mobile, tablet, and desktop devices.</li>
+  <li>Validate structured data using <a href="https://search.google.com/test/rich-results">Google’s Rich Results Test</a> to ensure proper SEO implementation.</li>
+  <li>Check Eco Mode toggle functionality:
+    <ul>
+      <li>Ensure that animations pause and default to their final state when Eco Mode is enabled.</li>
+      <li>Verify background videos stop and display fallback images in Eco Mode.</li>
+      <li>Confirm that Eco Mode colors (background, text, headings) are applied correctly across all pages.</li>
+      <li>Test toggle behavior across desktop, tablet, and mobile devices for consistency.</li>
+    </ul>
+  </li>
+</ul>
     </section>
 
     <section aria-labelledby="for-developers">
       <h2 id="for-developers">Advanced Development Notes</h2>
       <p>Developers can leverage Shopify CLI for local theme development and deploying advanced customizations. Refer to Shopify’s official <a href="https://shopify.dev/docs/themes/tools/cli">CLI Documentation</a> for detailed instructions.</p>
       <p>Use Vue.js and GSAP to create interactive components and animations, ensuring a dynamic shopping experience.</p>
+      <p><strong>Eco Mode Developer Notes:</strong></p>
+      <ul>
+        <li>Modify animations in <code>section1.js</code> using the <code>data: 'eco-mode'</code> property for selective control of animations.</li>
+        <li>Use the <code>handleBackgroundVideos</code> function in <code>eco-mode.js</code> to manage fallback images and video behavior.</li>
+        <li>Respond to the <code>eco-mode-changed</code> custom event to implement additional functionality triggered by Eco Mode state changes.</li>
+        <li>Disable non-essential animations or scripts dynamically when Eco Mode is active to optimize performance.</li>
+      </ul>
     </section>
+    
 
     <section aria-labelledby="support">
       <h2 id="support">Troubleshooting, Support and Documentation</h2>

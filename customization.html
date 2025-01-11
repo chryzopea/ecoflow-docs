@@ -65,6 +65,8 @@
         <li><a href="#body-width-customization">Body Width Customization</a></li>
         <li><a href="#customizing-the-store-logo">Customizing the Store Logo</a></li>
         <li><a href="#customizing-section-settings">Customizing Section Settings</a></li>
+        <li><a href="#eco-mode-customization">Eco Mode Customization</a></li>
+        <li><a href="#cookie-consent-management">Cookie Consent Management</a></li>
       </ul>
     </nav>
 
@@ -371,6 +373,83 @@
         </ol>
         <h3>Preview Changes</h3>
         <p>Leverage the responsive preview tool to verify that your customizations appear as expected across mobile, tablet, and desktop devices.</p>
+      </section>
+      
+      <section aria-labelledby="eco-mode-customization">
+        <h2 id="eco-mode-customization">Eco Mode Customization</h2>
+        <p>Eco Mode allows merchants to enhance accessibility and reduce energy consumption by controlling animations, colors, and background videos.</p>
+      
+        <h3>Available Settings</h3>
+        <ul>
+          <li>
+            <strong>Global Toggle:</strong> Enable or disable Eco Mode using a checkbox in the Theme Editor.
+          </li>
+          <li>
+            <strong>Animation Control:</strong> Animations pause and move to their final state when Eco Mode is enabled.
+          </li>
+          <li>
+            <strong>Color Adjustments:</strong> Define custom colors for Eco Mode using the following settings:
+            <ul>
+              <li>Body Background Color</li>
+              <li>Body Text Color</li>
+              <li>Heading Text Color</li>
+              <li>Paragraph Text Color</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Background Videos:</strong> Videos stop at the first frame in Eco Mode and optionally display fallback images.
+          </li>
+        </ul>
+      
+        <h3>How to Customize</h3>
+        <ol>
+          <li>Open the Shopify Theme Editor.</li>
+          <li>Navigate to the <strong>Eco Mode Settings</strong> section.</li>
+          <li>Adjust the following options:
+            <ul>
+              <li>Enable or disable Eco Mode using the toggle.</li>
+              <li>Set custom colors for the body, text, and headings.</li>
+              <li>Upload fallback images for background videos.</li>
+            </ul>
+          </li>
+          <li>Preview changes using the responsive preview tool to ensure consistency across devices.</li>
+        </ol>
+      
+        <h3>Preview Changes</h3>
+        <p>Test your Eco Mode settings on both desktop and mobile devices to ensure animations, colors, and videos behave as expected.</p>
+      </section>
+      
+      <section aria-labelledby="manage-cookie-preferences">
+        <h2 id="manage-cookie-preferences">Manage Cookie Preferences Link</h2>
+        <p>The EcoFlow theme includes an optional "Manage Cookie Preferences" link, allowing customers to update their cookie consent settings at any time. This feature integrates with Shopify's Privacy API and complements the cookie banner for GDPR compliance.</p>
+      
+        <h3>How to Enable</h3>
+        <ol>
+          <li>Open the Shopify Theme Editor.</li>
+          <li>Navigate to <strong>Theme Settings &gt; Cookie Consent Management</strong>.</li>
+          <li>Check the box labeled <strong>"Enable 'Manage Cookie Preferences' link in footer"</strong>.</li>
+          <li>Click <strong>Save</strong> to apply the changes.</li>
+        </ol>
+      
+        <h3>How to Customize</h3>
+        <ul>
+          <li><strong>Update Text:</strong> Edit the text in the <code>footer.liquid</code> file.</li>
+          <li><strong>Style the Link:</strong> Add custom CSS to your theme’s stylesheet. Example:
+            <pre><code>
+      .footer__content a {
+        color: #007acc;
+        text-decoration: underline;
+        font-size: 14px;
+      }
+            </code></pre>
+          </li>
+        </ul>
+      
+        <h3>Requirements</h3>
+        <ul>
+          <li>Ensure Shopify's cookie banner is enabled in <strong>Online Store &gt; Preferences &gt; Customer Privacy</strong>.</li>
+          <li>Shopify Privacy API must be available for this feature to function.</li>
+        </ul>
       </section>
       
       

@@ -229,7 +229,87 @@
           </li>
         </ul>
       </section>
+
+      <section aria-labelledby="event-names-import-fix">
+        <h2 id="event-names-import-fix">[1.6.1] - Scoped Events and Import Fix</h2>
+        <ul>
+          <li>
+            <strong>Scoped Custom Events:</strong> Updated all custom events (e.g., <code>eco-mode-changed</code>) to use namespaces like <code>eco-mode.custom-changed</code> to avoid conflicts with third-party apps and scripts.
+          </li>
+          <li>
+            <strong>Rollup Bundling Fix:</strong> Resolved Rollup path resolution issue by correcting the import path for <code>eco-mode.js</code> in <code>scripts.babel.js</code>.
+          </li>
+          <li>
+            <strong>Defensive Programming Enhancements:</strong> Added additional checks for missing DOM elements in Eco Mode and animation logic to improve reliability and error handling.
+          </li>
+        </ul>
+      </section>
       
+      <section aria-labelledby="eco-mode">
+        <h2 id="eco-mode">[1.7.0] - Eco Mode Integration</h2>
+        <ul>
+          <li>
+            <strong>Eco Mode Toggle:</strong>
+            A global animation and background handling toggle using a checkbox.
+            <ul>
+              <li>Freezes animations at their final frame when Eco Mode is enabled.</li>
+              <li>Dynamic resumption of animations when disabled.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Color Adjustments:</strong>
+            Customizable Eco Mode colors using CSS variables for body, text, and headings.
+          </li>
+          <li>
+            <strong>Background Video Management:</strong>
+            <ul>
+              <li>Stops background videos at the initial frame in Eco Mode.</li>
+              <li>Displays fallback images if defined for better compatibility.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Event-Driven Architecture:</strong>
+            <ul>
+              <li>Introduced <code>eco-mode-changed</code> custom events for modular integration.</li>
+              <li>Scoped events to <code>eco-mode.custom-changed</code> to avoid conflicts.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Enhanced Animation Control:</strong>
+            <ul>
+              <li>Animations support <code>data: 'eco-mode'</code> attributes for selective handling.</li>
+              <li>GSAP and ScrollTrigger used for smooth transitions.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+      
+      <section aria-labelledby="manage-cookie-preferences">
+        <h2 id="manage-cookie-preferences">[1.7.1] - Manage Cookie Preferences Integration</h2>
+        <ul>
+          <li>
+            <strong>Manage Cookie Preferences Link:</strong> Added functionality to allow customers to manage their cookie consent preferences directly from the footer.
+            <ul>
+              <li>Seamless integration with Shopify's Privacy API for consent management.</li>
+              <li>New theme setting to enable or disable the "Manage Cookie Preferences" link in the footer.</li>
+              <li>Supports customization for link text and styling via the Theme Editor and CSS.</li>
+            </ul>
+          </li>
+          <li>
+            <strong>Dynamic Preferences Dialog:</strong> Utilizes Shopify's <code>showPreferencesDialog</code> method to display a consent management dialog when the link is clicked.
+          </li>
+          <li>
+            <strong>Accessibility Enhancements:</strong> Fully accessible implementation with ARIA roles and keyboard navigation.
+          </li>
+          <li>
+            <strong>Requirements:</strong>
+            <ul>
+              <li>Shopify cookie banner and Privacy API must be enabled for this feature to function.</li>
+              <li>Fallback to third-party GDPR compliance apps if the Privacy API is unavailable.</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
       
     </div>
   </main>  

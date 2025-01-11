@@ -88,6 +88,21 @@
                     <li><a href="#logo-scaling-issue-mobile">Logo Scaling Issues on Mobile</a></li>
                 </ul>
             </details>
+            <details>
+                <summary>Eco Mode</summary>
+                <ul>
+                    <li><a href="#eco-mode-not-working">Eco Mode Not Working</a></li>
+                    <li><a href="#external-scripts-conflicts">External Scripts Causing Conflicts</a></li>
+                    <li><a href="#eco-mode-common-errors">Common Errors in Eco Mode</a></li>
+                </ul>
+            </details>     
+            <details>
+                <summary>Cookie Consent and Preferences</summary>
+                <ul>
+                    <li><a href="#cookie-preferences-link-not-working">Manage Cookie Preferences Link Not Working</a></li>
+                </ul>
+            </details>
+                   
         </nav>
 
         <h1 id="troubleshooting">Troubleshooting</h1>
@@ -252,6 +267,65 @@
                 <li>Ensure the logo file is responsive.</li>
                 <li>Use the Theme Editor's preview feature to check how it appears on mobile.</li>
             </ol>
+            <h3 id="eco-mode-not-working">Problem: Eco Mode Not Working</h3>
+            <p><strong>Solution:</strong></p>
+            <ol>
+                <li>Ensure the Eco Mode toggle is added in your Liquid file:
+                    <pre><code>&lt;input type="checkbox" id="eco-mode-checkbox" /&gt;</code></pre>
+                </li>
+                <li>Verify that the `eco-mode.js` script is correctly imported in `scripts.babel.js`:
+                    <pre><code>import { handleEcoMode } from './global/eco-mode.js';</code></pre>
+                </li>
+                <li>Confirm that GSAP animations are tagged with `data: 'eco-mode'` to ensure compatibility.</li>
+                <li>Check the browser console for any initialization errors and resolve them step-by-step.</li>
+            </ol>
+
+            <h3 id="external-scripts-conflicts">Problem: External Scripts Causing Conflicts</h3>
+                <p><strong>Solution:</strong></p>
+                <ol>
+                    <li>Ensure Eco Mode initializes after external scripts by wrapping the handler in a <code>DOMContentLoaded</code> listener:
+                        <pre><code>
+                            document.addEventListener('DOMContentLoaded', () => { 
+                                handleEcoMode(); 
+                            });
+                                    </code></pre>
+                                </li>
+                                <li>Use namespaced events to avoid conflicts:
+                                    <pre><code>
+                            window.addEventListener('eco-mode.custom-changed', (event) => { 
+                                const ecoModeEnabled = event.detail; 
+                                console.log('Eco Mode State Changed:', ecoModeEnabled); 
+                            });
+                        </code></pre>
+                    </li>
+                    <li>Debug by checking console logs for errors in GSAP animations or missing dependencies like <code>ScrollTrigger</code>.</li>
+                    <li>Ensure third-party apps or scripts do not globally disable animations by inspecting their settings or code logic.</li>
+                </ol>
+
+                <h3 id="eco-mode-common-errors">Problem: Common Errors in Eco Mode</h3>
+                    <p><strong>Solution:</strong></p>
+                    <ol>
+                        <li>Check for missing imports:
+                            <pre><code>import { handleEcoMode } from './global/eco-mode.js';</code></pre>
+                        </li>
+                        <li>Ensure GSAP animations include <code>data: 'eco-mode'</code> to allow proper toggling.</li>
+                        <li>Log state changes in <code>eco-mode.js</code> to verify correct toggle functionality:
+                            <pre><code>console.log('Eco Mode Active:', ecoModeEnabled);</code></pre>
+                        </li>
+                        <li>Verify video fallback images are correctly defined in the Liquid template:
+                            <pre><code>&lt;video data-fallback-image="{{ 'fallback.jpg' | asset_url }}"&gt;&lt;/video&gt;</code></pre>
+                        </li>
+                    </ol>
+
+                    <h3 id="cookie-preferences-link-not-working">Problem: Manage Cookie Preferences Link Not Working</h3>
+                        <p><strong>Solution:</strong></p>
+                        <ol>
+                            <li>Ensure the "Enable 'Manage Cookie Preferences' link in footer" option is checked in the Theme Editor under <strong>Cookie Consent Management</strong>.</li>
+                            <li>Verify that Shopify's cookie banner is enabled in <strong>Online Store &gt; Preferences &gt; Customer Privacy</strong>.</li>
+                            <li>Check the browser console for errors. If <code>Shopify.customerPrivacy</code> is undefined, confirm Shopify's Privacy API is supported in your store.</li>
+                            <li>If using custom styles, ensure the link is not hidden due to conflicting CSS rules.</li>
+                        </ol>
+
         </section>
     </div>
 </main>
