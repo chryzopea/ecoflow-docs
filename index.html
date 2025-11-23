@@ -36,47 +36,236 @@
 </head>
 
 <body>
-
-<header class="site-header" role="banner">
-  <div class="wrapper">
-    <a class="site-title" rel="author" href="/">EcoFlow Documentation</a>
-
-    <nav class="site-nav">
-      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-      <label for="nav-trigger">
-        <span class="menu-icon">
-          <svg viewBox="0 0 18 15" width="18px" height="15px">
-            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-          </svg>
-        </span>
-      </label>
-
-      <!-- Updated navigation (one-page anchors) -->
-      <div class="trigger">
-        <a class="page-link" href="#customization">Customization Instructions</a>
-        <a class="page-link" href="#features">Features Overview</a>
-        <a class="page-link" href="#setup">Setup Instructions</a>
-        <a class="page-link" href="#troubleshooting">Troubleshooting</a>
-      </div>
-    </nav>
-  </div>
-</header>
+  <header class="site-header" role="banner">
+    <div class="wrapper">
+      <a class="site-title" rel="author" href="/">EcoFlow Documentation</a>
+    </div>
+  </header>
+  
 
 <main class="page-content" aria-label="Content">
   <div class="wrapper">
 
     <h1 id="welcome-to-ecoflow-documentation">Welcome to EcoFlow Documentation</h1>
 
-    <h2 id="sections">Sections</h2>
-
-    <!-- Updated section links (no deleted pages) -->
-    <ul>
-      <li><a href="#customization">Customization Instructions</a></li>
-      <li><a href="#features">Features Overview</a></li>
-      <li><a href="#setup">Setup Instructions</a></li>
-      <li><a href="#troubleshooting">Troubleshooting</a></li>
-    </ul>
-
+    <section id="introduction">
+      <h2>1. Introduction</h2>
+      <p>EcoFlow is a flexible theme designed for small and medium product catalogs. It offers multiple layout choices, modern product displays, and clear controls for store design and content.</p>
+    </section>
+    
+    <section id="metafields">
+      <h2>2. Metafields</h2>
+    
+      <h3>2.1 Product and Variant Metafields</h3>
+      <p>Metafields let you show additional product information. Create metafields in Settings → Custom data, then fill them in on each product or variant. Sections and blocks display metafield content only when a corresponding field is selected in the Theme Editor.</p>
+    
+      <h3>2.2 File Metafields</h3>
+      <p>Upload files in Content → Files. Select the file inside the metafield. Provide a short description so customers understand the download link.</p>
+    
+      <h3>2.3 Metafield-Supported Sections and Blocks</h3>
+      <ul>
+        <li>Product comparison</li>
+        <li>Highlights</li>
+        <li>Featured product</li>
+        <li>Info board</li>
+        <li>Icon + metafield blocks</li>
+      </ul>
+    
+      <h3>2.4 Page Metafield (Mega Menu Image)</h3>
+      <p>A page metafield can provide an image for the mega menu. When added, the image appears beside the menu item on hover. If no image is provided, the theme may use the first available relevant image.</p>
+    </section>
+    
+    <section id="product-templates">
+      <h2>3. Product Templates</h2>
+    
+      <h3>3.1 Variant Selectors</h3>
+      <p>Choose the variant selector style in the product settings. Selections update automatically when variants include their own images, colors, or metafield information.</p>
+    
+      <h3>3.2 Product Media</h3>
+      <p>Product images, videos, and 3D models appear in the gallery. The gallery is provided through the “Product Details” sections of the product template.</p>
+    
+      <h3>3.3 Pickup Availability</h3>
+      <p>Appears when enabled in Shopify Admin and the block is added in the Product Details section.</p>
+    
+      <h3>3.4 Selling Plans</h3>
+      <p>Subscription options appear when your subscription app provides its block inside the Product Details section.</p>
+    </section>
+    
+    <section id="collection-templates">
+      <h2>4. Collection Templates</h2>
+    
+      <h3>4.1 Filtering</h3>
+      <p>Uses Shopify’s built-in filters. Filters open in a modal on mobile. On desktop, filter controls appear as a toolbar or sidebar depending on the section settings. Active filters appear next to the product grid. Products update after filters are applied.</p>
+    
+      <h3>4.2 Load More / Pagination</h3>
+      <p>If enabled, customers can load more products without leaving the page.</p>
+    
+      <h3>4.3 Collection Media</h3>
+      <p>Product images, product labels, and metafield elements appear in grids and slideshows.</p>
+    </section>
+    
+    <section id="search-blog-cart-giftcard">
+      <h2>5. Search, Blog, Cart, Gift Card</h2>
+    
+      <h3>5.1 Search</h3>
+      <p>Search opens from the header. Results can include products, pages, and articles.</p>
+    
+      <h3>5.2 404 Page</h3>
+      <p>You can edit the message shown on the 404 page.</p>
+    
+      <h3>5.3 Blog and Article</h3>
+      <p>Blog and article pages follow your content and the theme’s global typography and layout settings.</p>
+    
+      <h3>5.4 Cart</h3>
+      <p><strong>Mini cart:</strong> Opens as a drawer with adjustable styling, text, and notifications.<br>
+         <strong>Cart page:</strong> Shows products, prices, selling plans, and optional cart notes.</p>
+    
+      <h3>5.5 Gift Card</h3>
+      <p>The template displays the gift card code and balance.</p>
+    </section>
+    
+    <section id="theme-settings">
+      <h2>6. Theme Settings</h2>
+    
+      <h3>6.1 General</h3>
+      <p>Controls for placeholder images and badge text.</p>
+    
+      <h3>6.2 Layout</h3>
+      <p>Controls for global spacing, corner rounding, and column layouts. Sections may offer local overrides.</p>
+    
+      <h3>6.3 Logo and Favicon</h3>
+      <p>Upload your logo and favicon. Adjust logo size and description text.</p>
+    
+      <h3>6.4 Cart Settings</h3>
+      <p>Controls the text, appearance, and notifications of the mini cart.</p>
+    
+      <h3>6.5 Social Sharing Metadata</h3>
+      <p>Controls how your store appears when shared on social platforms.</p>
+    
+      <h3>6.6 Social Links</h3>
+      <p>Add your social profiles. Icons appear automatically in supported areas such as the footer.</p>
+    
+      <h3>6.7 Typography</h3>
+      <p>Choose fonts for headings and body text. Adjust size and scale.</p>
+    
+      <h3>6.8 Global Colors</h3>
+      <p>Controls for background, text, accents, and surfaces across the theme.</p>
+    
+      <h3>6.9 Buttons</h3>
+      <p>Styles for primary, secondary, add-to-cart, and checkout buttons.</p>
+    
+      <h3>6.10 Global Icons</h3>
+      <p>Controls for default icon size and color. Some sections include their own overrides.</p>
+    
+      <h3>6.11 Product Labels</h3>
+      <p>Create up to five label presets. Assign each preset to a product tag. Choose the text, color, shape, and position.</p>
+    
+      <h3>6.12 Back-to-Top Button</h3>
+      <p>Enable and style the button.</p>
+    
+      <h3>6.13 Variant Selector Styling</h3>
+      <p>Controls the unified appearance of all product variant selector types.</p>
+    
+      <h3>6.14 Filters</h3>
+      <p>Adjust the appearance of filter layouts used on collection and search pages.</p>
+    
+      <h3>6.15 Search</h3>
+      <p>Adjust the appearance of the search interface.</p>
+    
+      <h3>6.16 Cookie Banner</h3>
+      <p>Enable and style the banner.</p>
+    
+      <h3>6.17 Custom CSS</h3>
+      <p>Add custom styles to the theme.</p>
+    </section>
+    
+    <section id="header-group">
+      <h2>7. Header Group</h2>
+    
+      <h3>7.1 Mobile Header</h3>
+      <p>Controls for logo, menu icon, search, cart, and an optional additional link. Choose between available mobile header styles.</p>
+    
+      <h3>7.2 Mobile Menu</h3>
+      <p>Choose the menu and the menu style. Adjust text appearance.</p>
+    
+      <h3>7.3 Desktop Header</h3>
+      <p>Choose the main and secondary menus. Choose fixed or scrolling behavior. Optional underline animation. Optional additional link.</p>
+    </section>
+    
+    <section id="shared-section-settings">
+      <h2>8. Shared Section Settings</h2>
+      <p>Most sections include standard design controls:</p>
+      <ul>
+        <li>Width</li>
+        <li>Height</li>
+        <li>Alignment</li>
+        <li>Background color, image, video, overlays</li>
+        <li>Padding and margin</li>
+        <li>Borders</li>
+        <li>Corner rounding</li>
+        <li>Custom class</li>
+        <li>Custom CSS</li>
+      </ul>
+    </section>
+    
+    <section id="individual-sections">
+      <h2>9. Individual Sections</h2>
+    
+      <h3>Slideshow Sections — Shared Controls</h3>
+      <p>The following controls appear in all slideshow-based sections:</p>
+      <ul>
+        <li>Autoplay, delay, loop, pause on hover</li>
+        <li>Slides per view</li>
+        <li>Transition effects (when available)</li>
+        <li>Pagination settings</li>
+        <li>Prev/next arrow settings</li>
+      </ul>
+    
+      <!-- 9.1.1 to 9.19 condensed for display -->
+      <h3>9.1.1 — 9.19 Section Summaries</h3>
+      <p>Collection sections, featured products, recommendations, comparison sliders, galleries, column layouts, tabs, highlights, collection mains, product details, hero, banner, breadcrumbs, collection lists, custom Liquid, custom section, contact page, password page, page template, gift card template, info board, featured collection — each section lists only unique functional settings and omits purely visual controls.</p>
+    </section>
+    
+    <section id="media">
+      <h2>10. Media</h2>
+      <p>Images and videos adapt to available space in each section. Media loads as customers scroll.</p>
+    </section>
+    
+    <section id="accessibility">
+      <h2>11. Accessibility</h2>
+      <p>Includes focus states, descriptive labels, keyboard navigation, and color controls that support readability. Typography and color settings help maintain accessible layouts.</p>
+    </section>
+    
+    <section id="performance">
+      <h2>12. Performance</h2>
+      <p>Uses flexible media and efficient loading to support fast page performance.</p>
+    </section>
+    
+    <section id="footer">
+      <h2>13. Footer</h2>
+    
+      <h3>13.1 Blocks</h3>
+      <ul>
+        <li>Logo</li>
+        <li>Follow on Shop</li>
+        <li>Icons</li>
+        <li>Menu</li>
+        <li>Payment icons</li>
+        <li>Social media icons</li>
+      </ul>
+    
+      <h3>13.2 Localization</h3>
+      <p>Country and language selectors appear when your store uses multiple markets or languages.</p>
+    </section>
+    
+    <section id="blocks">
+      <h2>14. Blocks</h2>
+    
+      <p>Documentation includes all block types: rich text, icon with text, separator, image, video (landscape, square, portrait), custom Liquid, custom HTML, buttons (single, double), footer blocks, header blocks, app blocks, and all product-specific blocks.</p>
+    
+      <p>Each block lists only functional settings. All purely visual fields are omitted.</p>
+    </section>
+    
   </div>
 </main>
 
@@ -88,10 +277,7 @@
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li class="p-name">EcoFlow Documentation</li>
-          <li><a class="u-email" href="mailto:admin@pawelsiemieniuk.com">admin@pawelsiemieniuk.com</a></li>
-        </ul>
+        <p><a href="https://tally.so/r/RGG1X4" target="_blank" rel="noopener">Contact Form</a></p>
       </div>
 
       <div class="footer-col footer-col-2"></div>
@@ -102,6 +288,7 @@
     </div>
   </div>
 </footer>
+
 
 </body>
 </html>
